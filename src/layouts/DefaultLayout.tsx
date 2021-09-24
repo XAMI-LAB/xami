@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { Layout, Menu } from "antd";
+import { Button, Drawer, Layout, Menu } from "antd";
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
 import { NavLink, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFlag, faHome, faLightbulb, faScroll, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faFlag, faHome, faLightbulb, faScroll, faUsers } from '@fortawesome/free-solid-svg-icons';
 
 const { Sider, Content } = Layout;
 
@@ -11,6 +11,8 @@ export default function DefaultLayout(props: any) {
 
     const screen = useBreakpoint()
     const [collapsed, setCollapsed] = useState(screen.md);
+
+    const [drawerVisible, setDrawerVisible] = useState<boolean>(false);
 
     useEffect(() => {
         setCollapsed(screen.md ? false : true)
@@ -22,7 +24,7 @@ export default function DefaultLayout(props: any) {
 
     return (
         <Layout style={{ fontSize: screen.md ? "18px" : "14px" }}>
-            <Sider
+            {screen.md ? <Sider
                 theme="dark"
                 collapsible
                 collapsed={collapsed}
@@ -54,12 +56,43 @@ export default function DefaultLayout(props: any) {
                     <Menu.Item key='5' icon={<FontAwesomeIcon icon={faScroll} />}>
                         <Link to='/publications' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Publications</Link>
                     </Menu.Item>
-                    {/* <Menu.Item key='7' icon={<FontAwesomeIcon icon={faBrain} />}>
-                    <Link to='/playground'>Algorithms in Action</Link>
-                </Menu.Item> */}
                 </Menu>
             </Sider>
+                : <Drawer placement="left" onClose={() => setDrawerVisible(false)} visible={drawerVisible} width="256px" bodyStyle={{ padding: 0 }} style={{ zIndex: 10000 }}>
+                    <div style={{ textAlign: "center", paddingBottom: "16px", paddingTop: "26px", width: "256px" }}>
+                        <NavLink to="/">
+                            {
+                                collapsed ? <img alt="logo_small" height={"60px"} width={"60px"} style={{ objectFit: "cover", marginTop: "4px", marginBottom: "2px" }} src={process.env.PUBLIC_URL + '/assets/XAMI-Lab-Collapsed.png'} /> :
+                                    <img alt="logo_full" height={"80px"} style={{ objectFit: "cover", marginTop: "10px", marginBottom: "2px" }} src={process.env.PUBLIC_URL + '/assets/XAMI-Lab-C4-mini.png'} />
+                            }
+                        </NavLink>
+                    </div>
+                    <Menu theme='light' mode="inline" defaultSelectedKeys={["1"]} style={{ width: "256px" }}>
+                        <Menu.Item key='1' icon={<FontAwesomeIcon icon={faHome} />}>
+                            <Link to='/' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Home</Link>
+                        </Menu.Item>
+                        <Menu.Item key='2' icon={<FontAwesomeIcon icon={faFlag} />}>
+                            <Link to='/mission' style={{ fontFamily: "Raleway", fontWeight: "bold" }} >Our Mission</Link>
+                        </Menu.Item>
+                        <Menu.Item key='3' icon={<FontAwesomeIcon icon={faUsers} />}>
+                            <Link to='/members' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>People</Link>
+                        </Menu.Item>
+                        <Menu.Item key='4' icon={<FontAwesomeIcon icon={faLightbulb} />}>
+                            <Link to='/research-plan' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Research Projects</Link>
+                        </Menu.Item>
+                        <Menu.Item key='5' icon={<FontAwesomeIcon icon={faScroll} />}>
+                            <Link to='/publications' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Publications</Link>
+                        </Menu.Item>
+                        {/* <Menu.Item key='7' icon={<FontAwesomeIcon icon={faBrain} />}>
+                    <Link to='/playground'>Algorithms in Action</Link>
+                </Menu.Item> */}
+                    </Menu>
+                </Drawer>
 
+            }
+            {
+                screen.md || <Button onClick={() => setDrawerVisible(true)} icon={<FontAwesomeIcon icon={faBars} />} style={{ position: "fixed", top: "20px", zIndex: 9999 }} ></Button>
+            }
             <Layout style={{ minHeight: "100vh" }}>
                 <Content>
                     {props.children}

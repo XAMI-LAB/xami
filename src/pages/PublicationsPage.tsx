@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle, faCross, faFilter, faSearch, faSort, faSquare, faTimes } from '@fortawesome/free-solid-svg-icons';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
+import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
 
 
 const getColorCodeElement = (destination: PublicationDestination) => {
@@ -30,6 +31,7 @@ export default function PublicationsPage() {
     const publications = allPublications;
     const [queryParams, setQueryParams] = useState<PublicationQueryParams>(new PublicationQueryParams());
     const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
+    const screens = useBreakpoint();
 
     const getFilteredPublications = () => {
         let showingPublications = publications;
@@ -67,10 +69,10 @@ export default function PublicationsPage() {
             </Modal>
 
 
-            <div style={{ fontFamily: "Playfair Display", fontSize: "72px", fontWeight: "bold", paddingBottom: "46px" }}>
+            <div style={{ fontFamily: "Playfair Display", fontSize: screens.md ? "72px" : "46px", fontWeight: "bold", paddingBottom: "46px" }}>
                 Publications
             </div>
-            <Row justify="space-between">
+            <Row justify="space-between" gutter={[24, 24]}>
                 <Space direction="horizontal">
                     <Input style={{ maxWidth: "800px", }} placeholder="Search..." onChange={(e) => {
                         setQueryParams(
@@ -85,7 +87,7 @@ export default function PublicationsPage() {
                 <Space>
                     <Button icon={<FontAwesomeIcon style={{ marginTop: "6px", marginRight: "12px" }} size="sm" icon={faSquare} color="#a31f37" />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: PublicationDestination.Journals })))} >Journal</Button>
                     <Button icon={<FontAwesomeIcon style={{ marginTop: "6px", marginRight: "12px" }} size="sm" icon={faSquare} color="#32628c" />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: PublicationDestination.Conferences })))} >Conference</Button>
-                    <Button icon={<FontAwesomeIcon style={{ marginTop: "6px"}} size="sm" icon={faTimes} />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: undefined })))} ></Button>
+                    <Button icon={<FontAwesomeIcon style={{ marginTop: "6px" }} size="sm" icon={faTimes} />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: undefined })))} ></Button>
                 </Space>
             </Row>
 
@@ -95,7 +97,7 @@ export default function PublicationsPage() {
                         <List.Item key={p.id}>
                             <List.Item.Meta
                                 avatar={getColorCodeElement(p.destination)}
-                                style={{ textAlign: "start", }}
+                                style={{ textAlign: "start", fontFamily: "Raleway" }}
                                 title={
                                     <ReactMarkdown rehypePlugins={[rehypeRaw]} skipHtml={false}>
                                         {p.title}
