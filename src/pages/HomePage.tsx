@@ -27,42 +27,42 @@ export default function HomePage() {
                 <Divider />
                 <div style={{ fontSize: 26, fontWeight: "bold", paddingBottom: "26px", fontFamily: "Playfair Display", paddingTop: "8px" }}>Rsearch Themes</div>
                 <Row gutter={[32, 32]} justify="center" typeof="flex">
-                    <Col xs={24} md={12} xl={6}>
+                    <Col xs={24} md={12} xxl={6}>
                         <Card style={{ height: "100%", borderRadius: "20px" }} hoverable
                             onClick={() => {
                                 // TODO: Push to research theme page.
                             }}
-                            cover={<img style={{ objectFit: "cover", height: "250px", borderRadius: "20px", paddingTop: "10px", paddingLeft: "10px", paddingRight: "10px" }} alt="exlainble_predictive_process_analytics" src={`${process.env.PUBLIC_URL}/assets/predictive-process-analytics-img.jpeg`} />}
+                            cover={<img style={{ objectFit: "cover", height: "250px", borderRadius: "20px", paddingTop: "10px", paddingLeft: "10px", paddingRight: "10px" }} alt="exlainble_predictive_process_analytics" src={`${process.env.PUBLIC_URL}/assets/predictive-process-analytics-img.png`} />}
                         >
                             <Card.Meta title={<div style={{ fontWeight: 500, fontSize: screens.md ? "16px" : "11px", textAlign: "center", fontFamily: "Nunito" }}>{"Explainable Predictive Process Analytics"}</div>} />
                         </Card>
                     </Col>
-                    <Col xs={24} md={12} xl={6}>
+                    <Col xs={24} md={12} xxl={6}>
                         <Card style={{ height: "100%", borderRadius: "20px" }} hoverable
                             onClick={() => {
                                 // TODO: Push to research theme page. 
                             }}
-                            cover={<img style={{ objectFit: "cover", height: "250px", borderRadius: "20px", paddingTop: "10px", paddingLeft: "10px", paddingRight: "10px" }} alt="Probabilistic & Causal Models for Responsible AI IMG" src={`${process.env.PUBLIC_URL}/assets/responsible-ai-img.jpeg`} />}
+                            cover={<img style={{ objectFit: "cover", height: "250px", borderRadius: "20px", paddingTop: "10px", paddingLeft: "10px", paddingRight: "10px" }} alt="Probabilistic & Causal Models for Responsible AI IMG" src={`${process.env.PUBLIC_URL}/assets/responsible-ai-img.png`} />}
                         >
                             <Card.Meta title={<div style={{ fontWeight: 500, fontSize: screens.md ? "16px" : "11px", textAlign: "center", fontFamily: "Nunito" }}>{"Probabilistic & Causal Models for Responsible AI"}</div>} />
                         </Card>
                     </Col>
-                    <Col xs={24} md={12} xl={6}>
+                    <Col xs={24} md={12} xxl={6}>
                         <Card style={{ height: "100%", borderRadius: "20px" }} hoverable
                             onClick={() => {
                                 // TODO: Push to research theme page. 
                             }}
-                            cover={<img style={{ objectFit: "cover", height: "250px", borderRadius: "20px", paddingTop: "10px", paddingLeft: "10px", paddingRight: "10px" }} alt="exlainble_predictive_process_analytics" src={`${process.env.PUBLIC_URL}/assets/persuasive-models-img.jpeg`} />}
+                            cover={<img style={{ objectFit: "cover", height: "250px", borderRadius: "20px", paddingTop: "10px", paddingLeft: "10px", paddingRight: "10px" }} alt="exlainble_predictive_process_analytics" src={`${process.env.PUBLIC_URL}/assets/persuasive-models-img.png`} />}
                         >
                             <Card.Meta title={<div style={{ fontWeight: 500, fontSize: screens.md ? "16px" : "11px", textAlign: "center", fontFamily: "Nunito" }}>{"Persuasive Models for Explainable AI"}</div>} />
                         </Card>
                     </Col>
-                    <Col xs={24} md={12} xl={6}>
+                    <Col xs={24} md={12} xxl={6}>
                         <Card style={{ height: "100%", borderRadius: "20px" }} hoverable
                             onClick={() => {
                                 // TODO: Push to research theme page. 
                             }}
-                            cover={<img style={{ objectFit: "cover", height: "250px", borderRadius: "20px", paddingTop: "10px", paddingLeft: "10px", paddingRight: "10px" }} alt="exlainble_predictive_process_analytics" src={`${process.env.PUBLIC_URL}/assets/medical-ai-img.jpeg`} />}
+                            cover={<img style={{ objectFit: "cover", height: "250px", borderRadius: "20px", paddingTop: "10px", paddingLeft: "10px", paddingRight: "10px" }} alt="exlainble_predictive_process_analytics" src={`${process.env.PUBLIC_URL}/assets/medical-ai-img.png`} />}
                         >
                             <Card.Meta title={<div style={{ fontWeight: 500, fontSize: screens.md ? "16px" : "11px", textAlign: "center", fontFamily: "Nunito" }}>{"Explainable Medical Diagnostic Systems"}</div>} />
                         </Card>

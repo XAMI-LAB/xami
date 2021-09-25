@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Drawer, Layout, Menu } from "antd";
+import { Button, Drawer, Layout, Menu, Row } from "antd";
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
 import { NavLink, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useHistory } from 'react-router';
 import { faBars, faFlag, faHome, faLightbulb, faScroll, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { Header } from 'antd/lib/layout/layout';
 
 const { Sider, Content } = Layout;
 
@@ -11,6 +13,7 @@ export default function DefaultLayout(props: any) {
 
     const screen = useBreakpoint()
     const [collapsed, setCollapsed] = useState(screen.md);
+    const history = useHistory();
 
     const [drawerVisible, setDrawerVisible] = useState<boolean>(false);
 
@@ -58,30 +61,44 @@ export default function DefaultLayout(props: any) {
                     </Menu.Item>
                 </Menu>
             </Sider>
-                : <Drawer placement="left" onClose={() => setDrawerVisible(false)} visible={drawerVisible} width="256px" bodyStyle={{ padding: 0 }} style={{ zIndex: 10000 }}>
+                : <Drawer placement="left" onClose={() => setDrawerVisible(false)} visible={drawerVisible} width="256px" bodyStyle={{ padding: 0, backgroundColor: "#001628", minHeight: "100vh" }} style={{ zIndex: 10000, }}>
                     <div style={{ textAlign: "center", paddingBottom: "16px", paddingTop: "26px", width: "256px" }}>
                         <NavLink to="/">
                             {
-                                collapsed ? <img alt="logo_small" height={"60px"} width={"60px"} style={{ objectFit: "cover", marginTop: "4px", marginBottom: "2px" }} src={process.env.PUBLIC_URL + '/assets/XAMI-Lab-Collapsed.png'} /> :
-                                    <img alt="logo_full" height={"80px"} style={{ objectFit: "cover", marginTop: "10px", marginBottom: "2px" }} src={process.env.PUBLIC_URL + '/assets/XAMI-Lab-C4-mini.png'} />
+                                <img alt="logo_full" height={"80px"} style={{ objectFit: "cover", marginTop: "10px", marginBottom: "2px" }} src={process.env.PUBLIC_URL + '/assets/XAMI-Lab-C4-mini.png'} />
                             }
                         </NavLink>
                     </div>
-                    <Menu theme='light' mode="inline" defaultSelectedKeys={["1"]} style={{ width: "256px" }}>
-                        <Menu.Item key='1' icon={<FontAwesomeIcon icon={faHome} />}>
-                            <Link to='/' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Home</Link>
+                    <Menu theme='dark' mode="inline" defaultSelectedKeys={["1"]} style={{ width: "256px" }}>
+                        <Menu.Item key='1' icon={<FontAwesomeIcon icon={faHome} />} onClick={() => {
+                            history.push("/");
+                            setDrawerVisible(false);
+                        }}>
+                            <div style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Home</div>
                         </Menu.Item>
-                        <Menu.Item key='2' icon={<FontAwesomeIcon icon={faFlag} />}>
-                            <Link to='/mission' style={{ fontFamily: "Raleway", fontWeight: "bold" }} >Our Mission</Link>
+                        <Menu.Item key='2' icon={<FontAwesomeIcon icon={faFlag} />} onClick={() => {
+                            history.push("/mission");
+                            setDrawerVisible(false);
+                        }}>
+                            <div style={{ fontFamily: "Raleway", fontWeight: "bold" }} >Our Mission</div>
                         </Menu.Item>
-                        <Menu.Item key='3' icon={<FontAwesomeIcon icon={faUsers} />}>
-                            <Link to='/members' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>People</Link>
+                        <Menu.Item key='3' icon={<FontAwesomeIcon icon={faUsers} />} onClick={() => {
+                            history.push("/members");
+                            setDrawerVisible(false);
+                        }}>
+                            <div style={{ fontFamily: "Raleway", fontWeight: "bold" }}>People</div>
                         </Menu.Item>
-                        <Menu.Item key='4' icon={<FontAwesomeIcon icon={faLightbulb} />}>
-                            <Link to='/research-plan' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Research Projects</Link>
+                        <Menu.Item key='4' icon={<FontAwesomeIcon icon={faLightbulb} onClick={() => {
+                            history.push("/research-plan");
+                            setDrawerVisible(false);
+                        }} />}>
+                            <div style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Research Projects</div>
                         </Menu.Item>
-                        <Menu.Item key='5' icon={<FontAwesomeIcon icon={faScroll} />}>
-                            <Link to='/publications' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Publications</Link>
+                        <Menu.Item key='5' icon={<FontAwesomeIcon icon={faScroll} />} onClick={() => {
+                            history.push("/publications");
+                            setDrawerVisible(false);
+                        }}>
+                            <div style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Publications</div>
                         </Menu.Item>
                         {/* <Menu.Item key='7' icon={<FontAwesomeIcon icon={faBrain} />}>
                     <Link to='/playground'>Algorithms in Action</Link>
@@ -91,7 +108,19 @@ export default function DefaultLayout(props: any) {
 
             }
             {
-                screen.md || <Button onClick={() => setDrawerVisible(true)} icon={<FontAwesomeIcon icon={faBars} />} style={{ position: "fixed", top: "20px", zIndex: 9999 }} ></Button>
+                screen.md || <Button onClick={() => setDrawerVisible(true)} icon={<FontAwesomeIcon icon={faBars} />} style={{ position: "fixed", top: "35px", zIndex: 9999, color: "#111d2c" }} ></Button>
+            }
+            {
+                screen.md || <Header style={{ height: "100px" }}>
+                    <Row justify="center">
+                        <NavLink to="/">
+                            {
+
+                                <img alt="logo_full" height={"80px"} style={{ objectFit: "cover", marginTop: "10px", marginBottom: "2px" }} src={process.env.PUBLIC_URL + '/assets/XAMI-Lab-C4-mini.png'} />
+                            }
+                        </NavLink>
+                    </Row>
+                </Header>
             }
             <Layout style={{ minHeight: "100vh" }}>
                 <Content>
