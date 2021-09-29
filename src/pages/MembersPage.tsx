@@ -18,7 +18,7 @@ export default function MembersPage() {
     }
 
     return (
-        <div>
+        <div style={{ marginBottom: "200px"}}>
             {
                 [
                     getMemberShowingSectionWithOccupation("Founder", OccupationSection.Founder),

@@ -50,9 +50,7 @@ export default function PublicationsPage() {
     }
 
     return (
-        <div style={{ padding: "40px", maxWidth: "1360px" }} >
-
-
+        <div style={{ padding: "40px", maxWidth: "1360px", marginBottom: "200px" }} >
             <Modal visible={isModalVisible} onOk={() => setIsModalVisible(false)} onCancel={() => setIsModalVisible(false)} footer={null}>
                 <Space direction="horizontal" size="middle">
                     <div >

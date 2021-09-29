@@ -6,7 +6,7 @@ export default function ResearchProjectsPage() {
 
     return (
         <div style={{ padding: "40px", maxWidth: "1360px" }} >
-            <div style={{ fontFamily: "Playfair Display", fontSize: screens.md ? "72px" : "46px", fontWeight: "bold", paddingBottom: "46px" }}>
+            <div style={{ fontFamily: "Playfair Display", fontSize: screens.md ? "62px" : "32px", fontWeight: "bold", paddingBottom: "46px" }}>
                 Research Projects
             </div>
         </div >

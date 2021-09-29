@@ -11,7 +11,7 @@ export default function HomePage() {
     const screens = useBreakpoint()
 
     return (
-        <div style={{ textAlign: "start", padding: screens.md ? "40px 60px" : "40px 25px" }}>
+        <div style={{ textAlign: "start", padding: screens.md ? "40px 60px" : "40px 25px", marginBottom: "200px" }}>
             <div style={{ textAlign: "start" }}>
                 <div style={{ fontSize: 42, fontWeight: 400, paddingBottom: "7px", fontFamily: "Playfair Display" }}>Welcome to XAMI Lab @QUT!</div>
                 <div style={{ fontSize: 22, color: "#636363", fontFamily: "Raleway" }}>Explainable Analytics for MachineIntelligence (XAMI) Lab<br />Supporting Human-Machine Collaboration and Co-evolution</div>

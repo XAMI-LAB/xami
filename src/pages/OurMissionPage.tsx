@@ -6,8 +6,8 @@ export default function OurMissionPage() {
     const screens = useBreakpoint();
 
     return (
-        <div style={{ padding: "40px", maxWidth: "1360px" }} >
-            <div style={{marginBottom: "60px"}}>
+        <div style={{ padding: screens.md ? "40px 60px" : "40px 25px", maxWidth: "1360px" }} >
+            <div style={{ marginBottom: "60px" }}>
                 <div style={{ fontFamily: "Playfair Display", fontSize: screens.md ? "72px" : "46px", fontWeight: "bold", paddingBottom: "46px" }}>
                     Our Mission
                 </div>
@@ -18,7 +18,7 @@ export default function OurMissionPage() {
             </div>
 
             <Divider />
-            <div style={{ marginTop: "30px" }}>
+            <div style={{ marginTop: "30px", marginBottom:"200px" }}>
                 <div style={{ fontFamily: "Playfair Display", fontSize: screens.md ? "46px" : "32px", fontWeight: "bold", paddingBottom: "46px" }}>
                     Our Values
                 </div>
