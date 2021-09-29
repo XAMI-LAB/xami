@@ -83,14 +83,12 @@ export default function DefaultLayout(props: any) {
                             <div style={{ fontFamily: "Raleway", fontWeight: "bold" }} >Our Mission</div>
                         </Menu.Item>
                         <Menu.Item key='3' icon={<FontAwesomeIcon icon={faUsers} />} onClick={() => {
-                            console.log("People clicked")
                             history.push("/members");
                             setDrawerVisible(false);
                         }}>
                             <div style={{ fontFamily: "Raleway", fontWeight: "bold" }}>People</div>
                         </Menu.Item>
                         <Menu.Item key='4' icon={<FontAwesomeIcon icon={faLightbulb} />} onClick={() => {
-                            console.log("Projects clicked")
                             history.push("/research-projects");
                             setDrawerVisible(false);
                         }}>

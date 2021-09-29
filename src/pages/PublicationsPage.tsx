@@ -83,12 +83,17 @@ export default function PublicationsPage() {
                         )
                     }}></Input>
                     <Button icon={<FontAwesomeIcon icon={faFilter} />} type="default" onClick={() => setIsModalVisible(true)}></Button>
+                    {
+                        screens.md || <Button icon={<FontAwesomeIcon style={{ marginTop: "6px" }} size="sm" icon={faTimes} />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: undefined })))} ></Button>
+                    }
                 </Space>
                 <Space>
                     <Button icon={<FontAwesomeIcon style={{ marginTop: "6px", marginRight: "12px" }} size="sm" icon={faSquare} color="#e3812b" />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: PublicationDestination.Arxiv })))} >Arxiv</Button>
                     <Button icon={<FontAwesomeIcon style={{ marginTop: "6px", marginRight: "12px" }} size="sm" icon={faSquare} color="#a31f37" />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: PublicationDestination.Journals })))} >Journal</Button>
                     <Button icon={<FontAwesomeIcon style={{ marginTop: "6px", marginRight: "12px" }} size="sm" icon={faSquare} color="#32628c" />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: PublicationDestination.Conferences })))} >Conference</Button>
-                    <Button icon={<FontAwesomeIcon style={{ marginTop: "6px" }} size="sm" icon={faTimes} />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: undefined })))} ></Button>
+                    {
+                        screens.md ?? <Button icon={<FontAwesomeIcon style={{ marginTop: "6px" }} size="sm" icon={faTimes} />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: undefined })))} ></Button>
+                    }
                 </Space>
             </Row>
 
