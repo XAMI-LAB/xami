@@ -58,14 +58,14 @@ export const allMembers: MemberOutputDto[] = [
         occupationSub: "",
         orderNumber: 2,
     },
-    {
-        id: "6",
-        name: "Prof. Will van der Aalst",
-        occupation: OccupationSection.Collaborators,
-        profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535518/knaomursmwrmfqp4aiwj.jpg",
-        occupationSub: "",
-        orderNumber: 3,
-    },
+    // {
+    //     id: "6",
+    //     name: "Prof. Will van der Aalst",
+    //     occupation: OccupationSection.Collaborators,
+    //     profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535518/knaomursmwrmfqp4aiwj.jpg",
+    //     occupationSub: "",
+    //     orderNumber: 3,
+    // },
     {
         id: "7",
         name: "Mythreyi Velmurugan",
