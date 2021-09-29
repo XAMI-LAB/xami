@@ -30,6 +30,7 @@ export default function HomePage() {
                     <Col xs={24} md={12} xxl={6}>
                         <Card style={{ height: "100%", borderRadius: "20px" }} hoverable
                             onClick={() => {
+                                history.push('/research-projects')
                                 // TODO: Push to research theme page.
                             }}
                             cover={<img style={{ objectFit: "cover", height: "250px", borderRadius: "20px", paddingTop: "10px", paddingLeft: "10px", paddingRight: "10px" }} alt="exlainble_predictive_process_analytics" src={`${process.env.PUBLIC_URL}/assets/predictive-process-analytics-img.png`} />}
@@ -40,6 +41,7 @@ export default function HomePage() {
                     <Col xs={24} md={12} xxl={6}>
                         <Card style={{ height: "100%", borderRadius: "20px" }} hoverable
                             onClick={() => {
+                                history.push('/research-projects')
                                 // TODO: Push to research theme page. 
                             }}
                             cover={<img style={{ objectFit: "cover", height: "250px", borderRadius: "20px", paddingTop: "10px", paddingLeft: "10px", paddingRight: "10px" }} alt="Probabilistic & Causal Models for Responsible AI IMG" src={`${process.env.PUBLIC_URL}/assets/responsible-ai-img.png`} />}
@@ -50,6 +52,7 @@ export default function HomePage() {
                     <Col xs={24} md={12} xxl={6}>
                         <Card style={{ height: "100%", borderRadius: "20px" }} hoverable
                             onClick={() => {
+                                history.push('/research-projects')
                                 // TODO: Push to research theme page. 
                             }}
                             cover={<img style={{ objectFit: "cover", height: "250px", borderRadius: "20px", paddingTop: "10px", paddingLeft: "10px", paddingRight: "10px" }} alt="exlainble_predictive_process_analytics" src={`${process.env.PUBLIC_URL}/assets/persuasive-models-img.png`} />}
@@ -60,6 +63,7 @@ export default function HomePage() {
                     <Col xs={24} md={12} xxl={6}>
                         <Card style={{ height: "100%", borderRadius: "20px" }} hoverable
                             onClick={() => {
+                                history.push('/research-projects')
                                 // TODO: Push to research theme page. 
                                 // testing
                             }}
