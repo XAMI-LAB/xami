@@ -7,6 +7,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import MembersPage from './pages/MembersPage';
 import PublicationsPage from './pages/PublicationsPage';
+import OurMissionPage from './pages/OurMissionPage';
+import ResearchProjectsPage from './pages/ResearchProjectsPage';
 
 function App() {
   return (
@@ -21,6 +23,12 @@ function App() {
           </Route>
           <Route path="/publications">
             <PublicationsPage />
+          </Route>
+          <Route path="/our-mission">
+            <OurMissionPage />
+          </Route>
+          <Route path="/research-projects">
+            <ResearchProjectsPage />
           </Route>
           {/* <Route path="/members">
             <MembersRoutePage />

@@ -48,13 +48,13 @@ export default function DefaultLayout(props: any) {
                         <Link to='/' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Home</Link>
                     </Menu.Item>
                     <Menu.Item key='2' icon={<FontAwesomeIcon icon={faFlag} />}>
-                        <Link to='/mission' style={{ fontFamily: "Raleway", fontWeight: "bold" }} >Our Mission</Link>
+                        <Link to='/our-mission' style={{ fontFamily: "Raleway", fontWeight: "bold" }} >Our Mission</Link>
                     </Menu.Item>
                     <Menu.Item key='3' icon={<FontAwesomeIcon icon={faUsers} />}>
                         <Link to='/members' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>People</Link>
                     </Menu.Item>
                     <Menu.Item key='4' icon={<FontAwesomeIcon icon={faLightbulb} />}>
-                        <Link to='/research-plan' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Research Projects</Link>
+                        <Link to='/research-projects' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Research Projects</Link>
                     </Menu.Item>
                     <Menu.Item key='5' icon={<FontAwesomeIcon icon={faScroll} />}>
                         <Link to='/publications' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Publications</Link>

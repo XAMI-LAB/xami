@@ -25,7 +25,7 @@ export default function HomePage() {
                     or read our <Link to="/publications">publications</Link>.
                 </div>
                 <Divider />
-                <div style={{ fontSize: 26, fontWeight: "bold", paddingBottom: "26px", fontFamily: "Playfair Display", paddingTop: "8px" }}>Rsearch Themes</div>
+                <div style={{ fontSize: 26, fontWeight: "bold", paddingBottom: "26px", fontFamily: "Playfair Display", paddingTop: "8px" }}>Research Themes</div>
                 <Row gutter={[32, 32]} justify="center" typeof="flex">
                     <Col xs={24} md={12} xxl={6}>
                         <Card style={{ height: "100%", borderRadius: "20px" }} hoverable

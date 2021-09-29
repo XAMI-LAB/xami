@@ -76,7 +76,7 @@ export const allMembers: MemberOutputDto[] = [
     },
     {
         id: "8",
-        name: "Yu-Liang (Leon) Cho",
+        name: "Yu-Liang Cho",
         occupation: OccupationSection.HDRStudents,
         profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535686/lolnxfe64mt8vydthdlk.jpg",
         occupationSub: "",
@@ -84,7 +84,7 @@ export const allMembers: MemberOutputDto[] = [
     },
     {
         id: "9",
-        name: "Peng (Kenny) Yu",
+        name: "Peng Yu",
         occupation: OccupationSection.HDRStudents,
         profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535769/cbyv9gnmzbzlc5hmoc3s.jpg",
         occupationSub: "",
@@ -100,7 +100,7 @@ export const allMembers: MemberOutputDto[] = [
     },
     {
         id: "11",
-        name: "Jia (Jenny) Wei",
+        name: "Jia Wei",
         occupation: OccupationSection.HDRStudents,
         profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1620277624/rx31uwskj5lh26vpf8ws.jpg",
         occupationSub: "",
@@ -108,7 +108,7 @@ export const allMembers: MemberOutputDto[] = [
     },
     {
         id: "12",
-        name: "Chihcheng (Richard) Hsieh",
+        name: "Chihcheng Hsieh",
         occupation: OccupationSection.HDRStudents,
         profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619954466/frip22rpmow3rmas33lg.jpg",
         occupationSub: "",
@@ -116,11 +116,10 @@ export const allMembers: MemberOutputDto[] = [
     },
     {
         id: "13",
-        name: "Zhipeng (Zippo) He",
+        name: "Zhipeng He",
         occupation: OccupationSection.HDRStudents,
         profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1621732433/hb4j78tkbsewdqnhdvzw.jpg",
         occupationSub: "",
         orderNumber: 7,
     },
-
 ];

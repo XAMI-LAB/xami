@@ -31,7 +31,7 @@ export default function MembersSection(props: MembersSectionProps) {
                                     <Card style={{ height: "100%", borderRadius: "20px", width: "200px", boxShadow: "2px 2px #8888881f" }}
                                         cover={<img style={{ objectFit: "cover", height: "250px", borderRadius: "20px", padding: "10px" }} alt="persornal_image" src={m.profileImage} />}
                                     >
-                                        <Card.Meta title={<div style={{ fontSize: "12px", fontFamily: "Playfair Display", fontWeight: "bolder", textAlign: "center" }}>{m.name}</div>} description={m.occupationSub} />
+                                        <Card.Meta title={<div style={{ fontSize: "14px", fontFamily: "Playfair Display", fontWeight: "bolder", textAlign: "center" }}>{m.name}</div>} description={<div style={{ fontSize: "12px", textAlign: "center", fontFamily: "Nunito" }}>{m.occupationSub}</div>} />
                                     </Card>
                                 </div>
                             </Col>)
