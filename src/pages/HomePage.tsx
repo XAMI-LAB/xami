@@ -1,75 +1,95 @@
-import { Card, Col, Divider, Image, Row, Select } from 'antd'
+import { Typography, Card, Col, Divider, Image, Row, Select } from 'antd'
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
-import React from 'react'
+import React from 'react';
 import { useHistory } from 'react-router';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import {isMobile, isIE} from 'react-device-detect';
+import '../styles/Base.scss';
 
 export default function HomePage() {
+    // TODO: Replace all inline styles with scss styles
 
     const history = useHistory();
+    // const { Title } = Typography;
 
-    const screens = useBreakpoint()
+    // const screens = useBreakpoint()
+    if (isIE) return (<div> IE is not supported. Download Chrome/Edge/Firefox </div>)
+    var device = "desktop"
+    if (isMobile) {
+        device = "mobile"
+    }
+
 
     return (
-        <div style={{ textAlign: "start", padding: screens.md ? "40px 60px" : "40px 25px", marginBottom: "200px" }}>
-            <div style={{ textAlign: "start" }}>
-                <div style={{ fontSize: 42, fontWeight: 400, paddingBottom: "7px", fontFamily: "Playfair Display" }}>Welcome to XAMI Lab @QUT!</div>
-                <div style={{ fontSize: 22, color: "#636363", fontFamily: "Raleway" }}>Explainable Analytics for MachineIntelligence (XAMI) Lab<br />Supporting Human-Machine Collaboration and Co-evolution</div>
+        <div className={`home-content ${device}`}>
+            <div className="home-title">
+                <div className="title">Welcome to XAMI Lab @QUT!</div>
+                <div className="description">Explainable Analytics for Machine Intelligence (XAMI) Lab<br />Supporting Human-Machine Collaboration and Co-evolution</div>
                 <br />
                 <Divider />
-                <div style={{ fontSize: 26, fontWeight: "bold", paddingBottom: "7px", fontFamily: "Playfair Display" }}>About us</div>
-                <div style={{ width: screens.md ? "60vw" : "90vw", fontFamily: "Raleway" }}>
+                <div className="section">About us</div>
+                <div className="paragraph">
                     The Explainable Analytics for Machine Intelligence Lab provides a wide range of algorithms, methods and techniques to make machine learning models
                     explainable, transparent, trustworthy and understandable to human-decision makers.
-                    To learn more about this initiative, visit our <Link to="/members">team</Link>, <Link to="/research-plan">research projects</Link>,
-                    or read our <Link to="/publications">publications</Link>.
+                    To learn more about this initiative, visit our <Link className="link" to="/members">team</Link>, <Link className="link" to="/research-plan">research projects</Link>,
+                    or read our <Link className="link" to="/publications">publications</Link>.
                 </div>
                 <Divider />
-                <div style={{ fontSize: 26, fontWeight: "bold", paddingBottom: "26px", fontFamily: "Playfair Display", paddingTop: "8px" }}>Research Themes</div>
+                <div className="section">Research Themes</div>
                 <Row gutter={[32, 32]} justify="center" typeof="flex">
-                    <Col xs={24} md={12} xxl={6}>
-                        <Card style={{ height: "100%", borderRadius: "20px" }} hoverable
+                    <Col xs={24} sm={24} md={24} lg={12} xl={12}  xxl={6}>
+                        <Card className="card" hoverable
                             onClick={() => {
                                 history.push('/research-projects')
                                 // TODO: Push to research theme page.
                             }}
-                            cover={<img style={{ objectFit: "cover", height: "250px", borderRadius: "20px", paddingTop: "10px", paddingLeft: "10px", paddingRight: "10px" }} alt="exlainble_predictive_process_analytics" src={`${process.env.PUBLIC_URL}/assets/predictive-process-analytics-img.png`} />}
+                            cover={<img 
+                                alt="exlainble_predictive_process_analytics" 
+                                src={`${process.env.PUBLIC_URL}/assets/project/predictive-process-analytics-img.png`} />}
                         >
-                            <Card.Meta title={<div style={{ fontWeight: 500, fontSize: screens.md ? "16px" : "11px", textAlign: "center", fontFamily: "Nunito" }}>{"Explainable Predictive Process Analytics"}</div>} />
+                            <Card.Meta title={<div className="card-title" >{<Link className="link" to="/research-projects">Explainable Predictive Process Analytics</Link>}</div>} />
                         </Card>
                     </Col>
-                    <Col xs={24} md={12} xxl={6}>
-                        <Card style={{ height: "100%", borderRadius: "20px" }} hoverable
+                    <Col xs={24} sm={24} md={24} lg={12} xl={12} xxl={6}>
+                        <Card className="card" 
+                            hoverable
                             onClick={() => {
                                 history.push('/research-projects')
                                 // TODO: Push to research theme page. 
                             }}
-                            cover={<img style={{ objectFit: "cover", height: "250px", borderRadius: "20px", paddingTop: "10px", paddingLeft: "10px", paddingRight: "10px" }} alt="Probabilistic & Causal Models for Responsible AI IMG" src={`${process.env.PUBLIC_URL}/assets/responsible-ai-img.png`} />}
+                            cover={<img 
+                                    alt="Probabilistic & Causal Models for Responsible AI IMG" 
+                                    src={`${process.env.PUBLIC_URL}/assets/project/responsible-ai-img.png`} />}
                         >
-                            <Card.Meta title={<div style={{ fontWeight: 500, fontSize: screens.md ? "16px" : "11px", textAlign: "center", fontFamily: "Nunito" }}>{"Probabilistic & Causal Models for Responsible AI"}</div>} />
+                            <Card.Meta 
+                                title={<div className="card-title" >{<Link className="link" to="/research-projects">Probabilistic & Causal Models for Responsible AI</Link>}</div>} />
                         </Card>
                     </Col>
-                    <Col xs={24} md={12} xxl={6}>
-                        <Card style={{ height: "100%", borderRadius: "20px" }} hoverable
+                    <Col xs={24} sm={24} md={24} lg={12} xl={12} xxl={6}>
+                        <Card className="card" hoverable
                             onClick={() => {
                                 history.push('/research-projects')
                                 // TODO: Push to research theme page. 
                             }}
-                            cover={<img style={{ objectFit: "cover", height: "250px", borderRadius: "20px", paddingTop: "10px", paddingLeft: "10px", paddingRight: "10px" }} alt="exlainble_predictive_process_analytics" src={`${process.env.PUBLIC_URL}/assets/persuasive-models-img.png`} />}
+                            cover={<img 
+                                alt="exlainble_predictive_process_analytics" 
+                                src={`${process.env.PUBLIC_URL}/assets/project/persuasive-models-img.png`} />}
                         >
-                            <Card.Meta title={<div style={{ fontWeight: 500, fontSize: screens.md ? "16px" : "11px", textAlign: "center", fontFamily: "Nunito" }}>{"Persuasive Models for Explainable AI"}</div>} />
+                            <Card.Meta title={<div className="card-title">{<Link className="link" to="/research-projects">Persuasive Models for Explainable AI</Link>}</div>} />
                         </Card>
                     </Col>
-                    <Col xs={24} md={12} xxl={6}>
-                        <Card style={{ height: "100%", borderRadius: "20px" }} hoverable
+                    <Col xs={24} sm={24} md={24} lg={12} xl={12} xxl={6}>
+                        <Card className="card" hoverable
                             onClick={() => {
                                 history.push('/research-projects')
                                 // TODO: Push to research theme page. 
                                 // testing
                             }}
-                            cover={<img style={{ objectFit: "cover", height: "250px", borderRadius: "20px", paddingTop: "10px", paddingLeft: "10px", paddingRight: "10px" }} alt="exlainble_predictive_process_analytics" src={`${process.env.PUBLIC_URL}/assets/medical-ai-img.png`} />}
+                            cover={<img 
+                                alt="exlainble_predictive_process_analytics" 
+                                src={`${process.env.PUBLIC_URL}/assets/project/medical-ai-img.png`} />}
                         >
-                            <Card.Meta title={<div style={{ fontWeight: 500, fontSize: screens.md ? "16px" : "11px", textAlign: "center", fontFamily: "Nunito" }}>{"Explainable Medical Diagnostic Systems"}</div>} />
+                            <Card.Meta title={<div className="card-title">{<Link className="link" to="/research-projects">Explainable Medical Diagnostic Systems</Link>}</div>} />
                         </Card>
                     </Col>
                 </Row>

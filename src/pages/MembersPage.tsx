@@ -1,6 +1,8 @@
 import React from 'react'
 import MembersSection from '../components/member/MembersSection';
 import { allMembers, MemberOutputDto, OccupationSection } from '../models/member'
+import {isMobile, isIE} from 'react-device-detect';
+import '../styles/Base.scss'
 
 export default function MembersPage() {
 
@@ -17,11 +19,17 @@ export default function MembersPage() {
         }
     }
 
+    if (isIE) return (<div> IE is not supported. Download Chrome/Edge/Firefox </div>)
+    var device = "desktop"
+    if (isMobile) {
+        device = "mobile"
+    }
+
     return (
-        <div style={{ marginBottom: "200px"}}>
+        <div className={`home-content ${device}`}>
             {
                 [
-                    getMemberShowingSectionWithOccupation("Founder", OccupationSection.Founder),
+                    getMemberShowingSectionWithOccupation("Leaders", OccupationSection.Leader),
                     getMemberShowingSectionWithOccupation("Collaborators", OccupationSection.Collaborators),
                     getMemberShowingSectionWithOccupation("Researchers", OccupationSection.HDRStudents),
                 ]

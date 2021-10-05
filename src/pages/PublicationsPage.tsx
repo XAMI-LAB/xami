@@ -7,6 +7,8 @@ import { faCircle, faCross, faFilter, faSearch, faSort, faSquare, faTimes } from
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
+import {isMobile, isIE} from 'react-device-detect';
+import '../styles/Base.scss';
 
 
 const getColorCodeElement = (destination: PublicationDestination) => {
@@ -30,6 +32,7 @@ const getColorCodeElement = (destination: PublicationDestination) => {
 
 export default function PublicationsPage() {
 
+
     const publications = allPublications;
     const [queryParams, setQueryParams] = useState<PublicationQueryParams>(new PublicationQueryParams());
     const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
@@ -49,8 +52,14 @@ export default function PublicationsPage() {
         return showingPublications.sort((a: PublicationOutputDto, b: PublicationOutputDto) => b.publishedAt.getTime() - a.publishedAt.getTime());
     }
 
+    if (isIE) return (<div> IE is not supported. Download Chrome/Edge/Firefox </div>)
+    var device = "desktop"
+    if (isMobile) {
+        device = "mobile"
+    }
+
     return (
-        <div style={{ padding: "40px", maxWidth: "1360px", marginBottom: "200px" }} >
+        <div className={`home-content ${device}`}>
             <Modal visible={isModalVisible} onOk={() => setIsModalVisible(false)} onCancel={() => setIsModalVisible(false)} footer={null}>
                 <Space direction="horizontal" size="middle">
                     <div >
@@ -69,7 +78,7 @@ export default function PublicationsPage() {
             </Modal>
 
 
-            <div style={{ fontFamily: "Playfair Display", fontSize: screens.md ? "72px" : "46px", fontWeight: "bold", paddingBottom: "46px" }}>
+            <div className="home-title title">
                 Publications
             </div>
             <Row justify="space-between" gutter={[24, 24]}>

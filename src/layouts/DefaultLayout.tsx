@@ -4,10 +4,11 @@ import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
 import { NavLink, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useHistory } from 'react-router';
-import { faBars, faFlag, faHome, faLightbulb, faScroll, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faCode, faFlag, faHeart, faHome, faLightbulb, faScroll, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { Header } from 'antd/lib/layout/layout';
+import '../styles/Layout.scss';
 
-const { Sider, Content } = Layout;
+const { Sider, Content, Footer } = Layout;
 
 export default function DefaultLayout(props: any) {
 
@@ -108,11 +109,9 @@ export default function DefaultLayout(props: any) {
 
             }
             {
-                screen.md || <Button onClick={() => setDrawerVisible(true)} icon={<FontAwesomeIcon icon={faBars} />} style={{ position: "fixed", top: "35px", zIndex: 9999, color: "#111d2c" }} ></Button>
-            }
-            {
                 screen.md || <Header style={{ height: "100px" }}>
                     <Row justify="center">
+                    <Button onClick={() => setDrawerVisible(true)} icon={<FontAwesomeIcon icon={faBars} />} style={{ position: "relative", left: "-25%", top: "34px", zIndex: 9999, color: "#ffffff", backgroundColor: "#001628" }} ></Button>
                         <NavLink to="/">
                             {
 
@@ -124,8 +123,9 @@ export default function DefaultLayout(props: any) {
             }
             <Layout style={{ minHeight: "100vh" }}>
                 <Content>
-                    {props.children}
+                    {props.children}        
                 </Content>
+                <Footer style={{ textAlign: 'center' }}>Copywright ©2021 {<FontAwesomeIcon icon={faCode} />} with {<FontAwesomeIcon icon={faHeart} />}  by XAMI Lab.</Footer>
             </Layout>
         </Layout>
     )

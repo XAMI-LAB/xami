@@ -1,6 +1,7 @@
 import { Card, Col, Divider, Row } from 'antd';
 import React from 'react'
 import { MemberOutputDto } from '../../models/member'
+import '../../styles/Base.scss'
 
 export interface MembersSectionProps {
     title: string,
@@ -16,7 +17,7 @@ export default function MembersSection(props: MembersSectionProps) {
         <div>
             <div>
                 <Divider>
-                    <div style={{ fontFamily: "Playfair Display", fontWeight: "bold", fontSize: "2.5em", }}>{title}</div>
+                    <div style={{ fontFamily: "Montserrat", fontWeight: "bold", fontSize: "2.5em", }}>{title}</div>
                 </Divider>
             </div>
 
@@ -31,7 +32,7 @@ export default function MembersSection(props: MembersSectionProps) {
                                     <Card style={{ height: "100%", borderRadius: "20px", width: "200px", boxShadow: "2px 2px #8888881f" }}
                                         cover={<img style={{ objectFit: "cover", height: "250px", borderRadius: "20px", padding: "10px" }} alt="persornal_image" src={m.profileImage} />}
                                     >
-                                        <Card.Meta title={<div style={{ fontSize: "14px", fontFamily: "Playfair Display", fontWeight: "bolder", textAlign: "center" }}>{m.name}</div>} description={<div style={{ fontSize: "12px", textAlign: "center", fontFamily: "Nunito" }}>{m.occupationSub}</div>} />
+                                        <Card.Meta title={<div style={{ fontSize: "14px", fontFamily: "Raleway",whiteSpace: "pre-line", fontWeight: "bolder", textAlign: "center" }}>{m.name}</div>} description={<div style={{ fontSize: "12px", textAlign: "center", fontFamily: "sans-serif" }}>{m.occupationSub}</div>} />
                                     </Card>
                                 </div>
                             </Col>)
