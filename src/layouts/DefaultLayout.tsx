@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useHistory } from 'react-router';
 import { faBars, faCode, faFlag, faHeart, faHome, faLightbulb, faScroll, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { Header } from 'antd/lib/layout/layout';
-import '../styles/Layout.scss';
+import '../styles/Base.scss'
 
 const { Sider, Content, Footer } = Layout;
 
@@ -46,19 +46,19 @@ export default function DefaultLayout(props: any) {
                 </div>
                 <Menu theme='dark' mode='inline' defaultSelectedKeys={["1"]}>
                     <Menu.Item key='1' icon={<FontAwesomeIcon icon={faHome} />}>
-                        <Link to='/' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Home</Link>
+                        <Link className="link" to='/' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Home</Link>
                     </Menu.Item>
                     <Menu.Item key='2' icon={<FontAwesomeIcon icon={faFlag} />}>
-                        <Link to='/our-mission' style={{ fontFamily: "Raleway", fontWeight: "bold" }} >Our Mission</Link>
+                        <Link className="link" to='/our-mission' style={{ fontFamily: "Raleway", fontWeight: "bold" }} >Our Mission</Link>
                     </Menu.Item>
                     <Menu.Item key='3' icon={<FontAwesomeIcon icon={faUsers} />}>
-                        <Link to='/members' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>People</Link>
+                        <Link className="link" to='/members' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>People</Link>
                     </Menu.Item>
                     <Menu.Item key='4' icon={<FontAwesomeIcon icon={faLightbulb} />}>
-                        <Link to='/research-projects' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Research Projects</Link>
+                        <Link className="link" to='/research-projects' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Research Projects</Link>
                     </Menu.Item>
                     <Menu.Item key='5' icon={<FontAwesomeIcon icon={faScroll} />}>
-                        <Link to='/publications' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Publications</Link>
+                        <Link className="link" to='/publications' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Publications</Link>
                     </Menu.Item>
                 </Menu>
             </Sider>
@@ -125,7 +125,8 @@ export default function DefaultLayout(props: any) {
                 <Content>
                     {props.children}        
                 </Content>
-                <Footer style={{ textAlign: 'center' }}>Copywright ©2021 {<FontAwesomeIcon icon={faCode} />} with {<FontAwesomeIcon icon={faHeart} />}  by XAMI Lab.</Footer>
+                <Footer style={{ textAlign: 'center' }}>
+                    © Copyright 2021 {<FontAwesomeIcon icon={faCode} />} with {<FontAwesomeIcon icon={faHeart} />} by XAMI Lab <a href="http://www.qut.edu.au" target="_blank" rel="noreferrer">@QUT</a>.</Footer>
             </Layout>
         </Layout>
     )

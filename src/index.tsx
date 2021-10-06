@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import { store } from './store';
 import 'antd/dist/antd.css';
-import 'bootstrap/dist/css/bootstrap.css';
 
 ReactDOM.render(
   <React.StrictMode>

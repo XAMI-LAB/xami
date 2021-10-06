@@ -1,6 +1,8 @@
-import { Typography, Card, Col, Divider, Image, Row, Select } from 'antd'
+import { Card, Col, Divider, Image, Row, Select } from 'antd'
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
 import React from 'react';
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 import {isMobile, isIE} from 'react-device-detect';
@@ -10,7 +12,6 @@ export default function HomePage() {
     // TODO: Replace all inline styles with scss styles
 
     const history = useHistory();
-    // const { Title } = Typography;
 
     // const screens = useBreakpoint()
     if (isIE) return (<div> IE is not supported. Download Chrome/Edge/Firefox </div>)
@@ -34,6 +35,15 @@ export default function HomePage() {
                     To learn more about this initiative, visit our <Link className="link" to="/members">team</Link>, <Link className="link" to="/research-plan">research projects</Link>,
                     or read our <Link className="link" to="/publications">publications</Link>.
                 </div>
+
+                <div className="home-video">
+                    <LiteYouTubeEmbed 
+                        id="xUs_H9m3DrI"
+                        title='ACEMS Talk on Explainable Analytics for "Black-Box" Machine Intelligence'
+                        poster="hqdefault"
+                    />
+                </div>
+                
                 <Divider />
                 <div className="section">Research Themes</div>
                 <Row gutter={[32, 32]} justify="center" typeof="flex">
