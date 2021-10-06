@@ -12,6 +12,7 @@ src
 |- pages // all pages, including the routing page.
 |- queryParams // query parameters used for api.
 |- store // redux store.
+|- styles // stylesheet of the website.
 |- utils // utility functions.
 
 App.tsx // design routing here.
