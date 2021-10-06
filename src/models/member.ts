@@ -188,8 +188,7 @@ export const allMembers: MemberOutputDto[] = [
         id: "14",
         name: "Jing (Roy) Yang",
         occupation: OccupationSection.HDRStudents,
-        // TODO: change the link of roy's profile pic
-        profileImage: "",
+        profileImage: "https://res.cloudinary.com/zhipenghe/image/upload/v1633505346/avatar_dr4ypx.jpg",
         occupationSub: "PhD Student",
         orderNumber: 1,
         email: "roy.j.yang@qut.edu.au",
