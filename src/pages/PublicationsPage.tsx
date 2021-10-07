@@ -7,7 +7,6 @@ import { faCircle, faCross, faFilter, faSearch, faSort, faSquare, faTimes } from
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
-import {isMobile, isIE} from 'react-device-detect';
 import '../styles/Base.scss';
 
 
@@ -42,7 +41,7 @@ export default function PublicationsPage() {
         let showingPublications = publications;
 
         if (queryParams.destination) {
-            showingPublications = showingPublications.filter(p => p.destination == queryParams.destination);
+            showingPublications = showingPublications.filter(p => p.destination === queryParams.destination);
         }
 
         if (queryParams.content && queryParams.content.trim() !== "") {
@@ -52,14 +51,8 @@ export default function PublicationsPage() {
         return showingPublications.sort((a: PublicationOutputDto, b: PublicationOutputDto) => b.publishedAt.getTime() - a.publishedAt.getTime());
     }
 
-    if (isIE) return (<div> IE is not supported. Download Chrome/Edge/Firefox </div>)
-    var device = "desktop"
-    if (isMobile) {
-        device = "mobile"
-    }
-
     return (
-        <div className={`home-content ${device}`}>
+        <div className={`home-content`} style={{ marginLeft: screens.md ? "15%": "0%", maxWidth: screens.md ? "70%": "100%"}}>
             <Modal visible={isModalVisible} onOk={() => setIsModalVisible(false)} onCancel={() => setIsModalVisible(false)} footer={null}>
                 <Space direction="horizontal" size="middle">
                     <div >

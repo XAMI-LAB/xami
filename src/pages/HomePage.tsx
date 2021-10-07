@@ -5,7 +5,6 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
-import {isMobile, isIE} from 'react-device-detect';
 import '../styles/Base.scss';
 
 export default function HomePage() {
@@ -13,16 +12,10 @@ export default function HomePage() {
 
     const history = useHistory();
 
-    // const screens = useBreakpoint()
-    if (isIE) return (<div> IE is not supported. Download Chrome/Edge/Firefox </div>)
-    var device = "desktop"
-    if (isMobile) {
-        device = "mobile"
-    }
-
+    const screen = useBreakpoint()
 
     return (
-        <div className={`home-content ${device}`}>
+        <div className={`home-content`} style={{ marginLeft: screen.md ? "15%": "0%", maxWidth: screen.md ? "70%": "100%"}}>
             <div className="home-title">
                 <div className="title">Welcome to XAMI Lab @QUT!</div>
                 <div className="description">Explainable Analytics for Machine Intelligence (XAMI) Lab<br />Supporting Human-Machine Collaboration and Co-evolution</div>
@@ -72,7 +65,7 @@ export default function HomePage() {
                                     src={`${process.env.PUBLIC_URL}/assets/project/responsible-ai-img.png`} />}
                         >
                             <Card.Meta 
-                                title={<div className="card-title" >{<Link className="link" to="/research-projects">Probabilistic & Causal Models for Responsible AI</Link>}</div>} />
+                                title={<div className="card-title">{<Link className="link" to="/research-projects">Probabilistic & Causal Models for Responsible AI</Link>}</div>} />
                         </Card>
                     </Col>
                     <Col xs={24} sm={24} md={24} lg={12} xl={12} xxl={6}>
