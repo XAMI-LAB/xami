@@ -40,7 +40,7 @@ export default function MembersSection(props: MembersSectionProps) {
             </div>
 
             <Row justify="center" >
-                <Col xxl={15} xl={20} lg={24} md={24} sm={24} xs={24}>
+                <Col xxl={24} xl={20} lg={24} md={24} sm={24} xs={24}>
                     <Row gutter={[16, 16]} justify="center" typeof="flex" >
                         {
                             members.map(m => <Col key={m.id}

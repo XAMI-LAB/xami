@@ -1,20 +1,13 @@
 import { Divider } from 'antd';
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint'
 import React from 'react'
-import {isMobile, isIE} from 'react-device-detect';
 import '../styles/Base.scss'
 
 export default function OurMissionPage() {
-    // const screens = useBreakpoint();
-
-    if (isIE) return (<div> IE is not supported. Download Chrome/Edge/Firefox </div>)
-    var device = "desktop"
-    if (isMobile) {
-        device = "mobile"
-    }
+    const screen = useBreakpoint();
 
     return (
-        <div className={`home-content ${device}`}>
+        <div className={`home-content`} style={{ marginLeft: screen.md ? "15%": "0%", maxWidth: screen.md ? "70%": "100%"}}>
             <div className="home-title">
                 <div className="title">
                     Our Mission

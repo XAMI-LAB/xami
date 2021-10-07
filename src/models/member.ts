@@ -63,7 +63,7 @@ export const allMembers: MemberOutputDto[] = [
     },
     {
         id: "4",
-        name: "A\Prof. Yue Xu",
+        name: "A/Prof. Yue Xu",
         occupation: OccupationSection.Collaborators,
         profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1621573622/israd7mxvdxd5gbljesp.jpg",
         occupationSub: "Associate Professor",
@@ -196,5 +196,18 @@ export const allMembers: MemberOutputDto[] = [
         scholar: "https://scholar.google.com/citations?user=Ms1FNhsAAAAJ",
         homepage: "https://royjy.me/",
         github: "https://github.com/roy-jingyang",
-    }
+    },
+    {
+        id: "15",
+        name: "Giuseppe Jordão",
+        occupation: OccupationSection.HDRStudents,
+        profileImage: "https://res.cloudinary.com/zhipenghe/image/upload/v1633574090/GetAttachmentThumbnail_ihcpdc.jpg",
+        occupationSub: "Research Assistant",
+        orderNumber: 9,
+        email: "guiseppe.jordao@qut.edu.au",
+        linkedIn: "",
+        homepage: "",
+        github: "",
+        scholar: "",
+    },
 ];
