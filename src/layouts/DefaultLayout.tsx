@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useHistory } from 'react-router';
 import { faBars, faCode, faFlag, faHeart, faHome, faLightbulb, faScroll, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { Header } from 'antd/lib/layout/layout';
+import { CodeIcon, HeartFillIcon } from '@primer/octicons-react'
 import '../styles/Base.scss'
 
 const { Sider, Content, Footer } = Layout;
@@ -126,7 +127,8 @@ export default function DefaultLayout(props: any) {
                     {props.children}        
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>
-                    © Copyright 2021 {<FontAwesomeIcon icon={faCode} />} with {<FontAwesomeIcon icon={faHeart} />} by XAMI Lab <a href="http://www.qut.edu.au" target="_blank" rel="noreferrer">@QUT</a>.</Footer>
+                    © Copyright 2021 {<CodeIcon size={18} />} with {<HeartFillIcon size={18} />} by XAMI Lab <a href="http://www.qut.edu.au" target="_blank" rel="noreferrer">@QUT</a>.
+                </Footer>
             </Layout>
         </Layout>
     )

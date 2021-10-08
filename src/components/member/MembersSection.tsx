@@ -23,9 +23,9 @@ export default function MembersSection(props: MembersSectionProps) {
         var nodeList = [];
         m.homepage && nodeList.push(<a href={m.homepage} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faHome} /></a>);
         m.email && nodeList.push(<a href={"mailto:"+m.email} target='_blank' rel="noreferrer"><FontAwesomeIcon icon={faEnvelope} /></a>);
-        m.scholar && nodeList.push(<a href={m.scholar} target="_blank" rel="noreferrer"><i className="ai ai-google-scholar"></i></a>);
+        // m.scholar && nodeList.push(<a href={m.scholar} target="_blank" rel="noreferrer"><i className="ai ai-google-scholar"></i></a>);
         m.linkedIn && nodeList.push(<a href={m.linkedIn} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a>);
-        m.github && nodeList.push(<a href={m.github} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></a>);
+        // m.github && nodeList.push(<a href={m.github} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></a>);
 
         return nodeList;
     }
@@ -52,7 +52,12 @@ export default function MembersSection(props: MembersSectionProps) {
                                                     alt="persornal_image" src={m.profileImage} />}
                                         actions={actionsList(m)}
                                     >
-                                        <Card.Meta title={<div style={{ fontSize: "14px", fontFamily: "Raleway",whiteSpace: "pre-line", fontWeight: "bolder", textAlign: "center" }}>{m.name}</div>} description={<div style={{ fontSize: "12px", textAlign: "center", fontFamily: "sans-serif" }}>{m.occupationSub}</div>} />
+                                        <Card.Meta title={<div style={{ fontSize: "14px", fontFamily: "Raleway",whiteSpace: "pre-line", fontWeight: "bolder", textAlign: "center"}}>{m.name}</div>} 
+                                                description={<div style={{ color: "#505050"}}>
+                                                    <div style={{ fontSize: "11px", textAlign: "center", fontFamily: "sans-serif", fontWeight: "bold"}}>{m.occupationSub}</div>
+                                                    <div style={{ fontSize: "11px", textAlign: "center", fontFamily: "sans-serif" }}>{m.school}</div>
+                                                    <div style={{ fontSize: "11px", textAlign: "center", fontFamily: "sans-serif" }}>{m.university}</div>
+                                                </div>} />
                                     </Card>
                                 </div>
                             </Col>)
