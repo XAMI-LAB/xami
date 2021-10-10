@@ -7,6 +7,7 @@ import { faCircle, faCross, faFilter, faSearch, faSort, faSquare, faTimes } from
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
+import '../styles/Base.scss';
 
 
 const getColorCodeElement = (destination: PublicationDestination) => {
@@ -30,6 +31,7 @@ const getColorCodeElement = (destination: PublicationDestination) => {
 
 export default function PublicationsPage() {
 
+
     const publications = allPublications;
     const [queryParams, setQueryParams] = useState<PublicationQueryParams>(new PublicationQueryParams());
     const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
@@ -39,7 +41,7 @@ export default function PublicationsPage() {
         let showingPublications = publications;
 
         if (queryParams.destination) {
-            showingPublications = showingPublications.filter(p => p.destination == queryParams.destination);
+            showingPublications = showingPublications.filter(p => p.destination === queryParams.destination);
         }
 
         if (queryParams.content && queryParams.content.trim() !== "") {
@@ -50,7 +52,7 @@ export default function PublicationsPage() {
     }
 
     return (
-        <div style={{ padding: "40px", maxWidth: "1360px", marginBottom: "200px" }} >
+        <div className={`home-content`} style={{ marginLeft: screens.md ? "15%": "0%", maxWidth: screens.md ? "70%": "100%"}}>
             <Modal visible={isModalVisible} onOk={() => setIsModalVisible(false)} onCancel={() => setIsModalVisible(false)} footer={null}>
                 <Space direction="horizontal" size="middle">
                     <div >
@@ -69,7 +71,7 @@ export default function PublicationsPage() {
             </Modal>
 
 
-            <div style={{ fontFamily: "Playfair Display", fontSize: screens.md ? "72px" : "46px", fontWeight: "bold", paddingBottom: "46px" }}>
+            <div className="home-title title">
                 Publications
             </div>
             <Row justify="space-between" gutter={[24, 24]}>

@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+// Dimensions
+
+@import "./theme";
+
+
+//  HomePage
+
+.home-content {
+    padding: 40px 60px;
+    margin-bottom: 100px;
+
+}
+
+/* unvisited link */
+.link:link {
+    color: var(--global-theme-color);
+    text-decoration: none;
+}
+
+/* mouse over link */
+.link:hover {
+    color: var(--global-hover-color);
+    text-decoration: underline;
+}
+
+
+.home-title {
+    text-align: start;
+
+}
+.title {
+    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 42px;
+    padding-bottom: 20px;
+    font-weight: 600;
+}
+.description {
+    font-family: 'Raleway';
+    font-size: 22px;
+    color: var(--global-text-color-light);
+}
+
+.section {
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+.subsection {
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 22px;
+}
+
+.paragraph {
+    text-align: start;
+    font-family: 'Raleway';
+    // width: 70%;
+    margin: auto;
+}
+
+.card {
+    height: 100%;
+    // border-radius: 20px;
+    // max-width: 350px;
+    
+
+    .card-title {
+        font-weight: 400;
+        text-align: center;
+        font-size: 25px;
+        font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+        width: 100%;
+        white-space: pre-line;
+    }
+}
+
+// PublicationsPage
+
+.publication {
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 42px;
+    padding-bottom: 20px;
+    font-weight: 600;
+    text-align: start;
+    // margin-bottom: 20px; 
+}
+
+// youtube embed
+.home-video {
+    margin-left: 5%;
+    padding-top: 30px;
+    width: 90%;
+}

@@ -4,10 +4,12 @@ import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
 import { NavLink, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useHistory } from 'react-router';
-import { faBars, faFlag, faHome, faLightbulb, faScroll, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faCode, faFlag, faHeart, faHome, faLightbulb, faScroll, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { Header } from 'antd/lib/layout/layout';
+import { CodeIcon, HeartFillIcon } from '@primer/octicons-react'
+import '../styles/Base.scss'
 
-const { Sider, Content } = Layout;
+const { Sider, Content, Footer } = Layout;
 
 export default function DefaultLayout(props: any) {
 
@@ -45,19 +47,19 @@ export default function DefaultLayout(props: any) {
                 </div>
                 <Menu theme='dark' mode='inline' defaultSelectedKeys={["1"]}>
                     <Menu.Item key='1' icon={<FontAwesomeIcon icon={faHome} />}>
-                        <Link to='/' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Home</Link>
+                        <Link className="link" to='/' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Home</Link>
                     </Menu.Item>
                     <Menu.Item key='2' icon={<FontAwesomeIcon icon={faFlag} />}>
-                        <Link to='/our-mission' style={{ fontFamily: "Raleway", fontWeight: "bold" }} >Our Mission</Link>
+                        <Link className="link" to='/our-mission' style={{ fontFamily: "Raleway", fontWeight: "bold" }} >Our Mission</Link>
                     </Menu.Item>
                     <Menu.Item key='3' icon={<FontAwesomeIcon icon={faUsers} />}>
-                        <Link to='/members' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>People</Link>
+                        <Link className="link" to='/members' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>People</Link>
                     </Menu.Item>
                     <Menu.Item key='4' icon={<FontAwesomeIcon icon={faLightbulb} />}>
-                        <Link to='/research-projects' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Research Projects</Link>
+                        <Link className="link" to='/research-projects' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Research Projects</Link>
                     </Menu.Item>
                     <Menu.Item key='5' icon={<FontAwesomeIcon icon={faScroll} />}>
-                        <Link to='/publications' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Publications</Link>
+                        <Link className="link" to='/publications' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Publications</Link>
                     </Menu.Item>
                 </Menu>
             </Sider>
@@ -108,11 +110,9 @@ export default function DefaultLayout(props: any) {
 
             }
             {
-                screen.md || <Button onClick={() => setDrawerVisible(true)} icon={<FontAwesomeIcon icon={faBars} />} style={{ position: "fixed", top: "35px", zIndex: 9999, color: "#111d2c" }} ></Button>
-            }
-            {
                 screen.md || <Header style={{ height: "100px" }}>
                     <Row justify="center">
+                    <Button onClick={() => setDrawerVisible(true)} icon={<FontAwesomeIcon icon={faBars} />} style={{ position: "relative", left: "-25%", top: "34px", zIndex: 9999, color: "#ffffff", backgroundColor: "#001628" }} ></Button>
                         <NavLink to="/">
                             {
 
@@ -124,8 +124,11 @@ export default function DefaultLayout(props: any) {
             }
             <Layout style={{ minHeight: "100vh" }}>
                 <Content>
-                    {props.children}
+                    {props.children}        
                 </Content>
+                <Footer style={{ textAlign: 'center' }}>
+                    © Copyright 2021 {<CodeIcon size={18} />} with {<HeartFillIcon size={18} />} by XAMI Lab <a href="http://www.qut.edu.au" target="_blank" rel="noreferrer">@QUT</a>.
+                </Footer>
             </Layout>
         </Layout>
     )

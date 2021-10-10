@@ -1,9 +1,12 @@
 import React from 'react'
+import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
 import MembersSection from '../components/member/MembersSection';
 import { allMembers, MemberOutputDto, OccupationSection } from '../models/member'
+import '../styles/Base.scss'
 
 export default function MembersPage() {
 
+    const screen = useBreakpoint()
     const members = allMembers;
 
     const getMemberShowingSectionWithOccupation = (title: string, occupationSection: OccupationSection) => {
@@ -18,10 +21,10 @@ export default function MembersPage() {
     }
 
     return (
-        <div style={{ marginBottom: "200px"}}>
+        <div className={`home-content`} style={{ marginLeft: screen.md ? "15%": "0%", maxWidth: screen.md ? "70%": "100%"}}>
             {
                 [
-                    getMemberShowingSectionWithOccupation("Founder", OccupationSection.Founder),
+                    getMemberShowingSectionWithOccupation("Leaders", OccupationSection.Leader),
                     getMemberShowingSectionWithOccupation("Collaborators", OccupationSection.Collaborators),
                     getMemberShowingSectionWithOccupation("Researchers", OccupationSection.HDRStudents),
                 ]
