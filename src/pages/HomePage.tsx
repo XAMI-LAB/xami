@@ -28,12 +28,14 @@ export default function HomePage() {
                     To learn more about this initiative, visit our <Link className="link" to="/members">team</Link>, <Link className="link" to="/research-plan">research projects</Link>,
                     or read our <Link className="link" to="/publications">publications</Link>.
                 </div>
-
+                <Divider />
+                <div className="subsection">Introduction to Explainable Analytics for "Black-Box" Machine Intelligence</div>
                 <div className="home-video">
                     <LiteYouTubeEmbed 
                         id="xUs_H9m3DrI"
                         title='ACEMS Talk on Explainable Analytics for "Black-Box" Machine Intelligence'
-                        poster="hqdefault"
+                        poster="maxresdefault"
+                        noCookie={true}
                     />
                 </div>
                 
