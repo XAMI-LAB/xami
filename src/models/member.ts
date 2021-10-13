@@ -3,7 +3,7 @@ export enum OccupationSection {
     Leader = "Leader",
     Collaborators = "Collaborators",
     HDRStudents = "HDRStudents",
-    HonorsStudent = "HonorsStudent",
+    ExternalResearchers = "ExternalResearchers"
 }
 
 
@@ -248,7 +248,7 @@ export const allMembers: MemberOutputDto[] = [
     {
         id: "16",
         name: "Gonçalo\n Almeida",
-        occupation: OccupationSection.HDRStudents,
+        occupation: OccupationSection.ExternalResearchers,
         profileImage: "https://res.cloudinary.com/zhipenghe/image/upload/v1633680762/GetAttachmentThumbnail_zxf6mt.jpg",
         orderNumber: 10,
         occupationSub: "Master Student",
