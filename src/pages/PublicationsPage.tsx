@@ -7,6 +7,7 @@ import { faCircle, faCross, faFilter, faSearch, faSort, faSquare, faTimes } from
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
+import { RepoIcon, FileIcon, VideoIcon, RocketIcon, NoteIcon  } from '@primer/octicons-react'
 import '../styles/Base.scss';
 
 
@@ -36,6 +37,18 @@ export default function PublicationsPage() {
     const [queryParams, setQueryParams] = useState<PublicationQueryParams>(new PublicationQueryParams());
     const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
     const screens = useBreakpoint();
+
+        // Action list of members's social icons
+    const actionsList = (p: PublicationOutputDto) => {
+        var nodeList = [];
+        p.doi && nodeList.push( <Button className="publication-button" href={p.doi} target="_blank" rel="noreferrer"><FileIcon size={16} />&nbsp;&nbsp;Paper</Button>);
+        p.arXiv && nodeList.push(<Button className="publication-button" href={p.arXiv} target="_blank" rel="noreferrer"><FileIcon size={16} />&nbsp;&nbsp;Paper</Button>);
+        p.code && nodeList.push(<Button  className="publication-button" href={p.code} target="_blank" rel="noreferrer"><RepoIcon size={16} /> &nbsp;&nbsp;Code</Button>);
+        p.demo && nodeList.push(<Button  className="publication-button" href={p.demo} target="_blank" rel="noreferrer"><RocketIcon   size={16} /> &nbsp;&nbsp;Demo</Button>);
+        p.video && nodeList.push(<Button  className="publication-button" href={p.video} target="_blank" rel="noreferrer"><VideoIcon  size={16} /> &nbsp;&nbsp;Video</Button>);
+        p.slide && nodeList.push(<Button  className="publication-button" href={p.slide} target="_blank" rel="noreferrer"><NoteIcon  size={16} /> &nbsp;&nbsp;Slide</Button>);
+        return nodeList;
+    }
 
     const getFilteredPublications = () => {
         let showingPublications = publications;
@@ -99,18 +112,19 @@ export default function PublicationsPage() {
                 </Space>
             </Row>
 
-            <List style={{ marginTop: "30px" }}>
+            <List style={{ marginTop: "30px" }} itemLayout="vertical">
                 {
                     getFilteredPublications().map(p =>
-                        <List.Item key={p.id}>
+                        <List.Item key={p.id} >
                             <List.Item.Meta
                                 avatar={getColorCodeElement(p.destination)}
-                                style={{ textAlign: "start", fontFamily: "Raleway" }}
+                                style={{ textAlign: "start", fontFamily: "Raleway", marginBottom: "-10px" }}
                                 title={
                                     <ReactMarkdown rehypePlugins={[rehypeRaw]} skipHtml={false}>
                                         {p.title}
                                     </ReactMarkdown>
                                 }
+                                description={actionsList(p)}
                             />
                         </List.Item>
                     )
