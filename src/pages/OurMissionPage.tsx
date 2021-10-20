@@ -1,5 +1,6 @@
 import { Divider } from 'antd';
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint'
+import { LoremIpsum } from 'react-lorem-ipsum';
 import React from 'react'
 import '../styles/Base.scss'
 
@@ -8,6 +9,17 @@ export default function OurMissionPage() {
 
     return (
         <div className={`home-content`} style={{ marginLeft: screen.md ? "15%": "0%", maxWidth: screen.md ? "70%": "100%"}}>
+            <div className="home-title">
+                <div className="title">
+                    Our Vision
+                </div>
+
+                <div className="paragraph">
+                <LoremIpsum p={1} />
+                </div>
+            </div>
+            
+            <Divider />
             <div className="home-title">
                 <div className="title">
                     Our Mission
@@ -40,6 +52,17 @@ export default function OurMissionPage() {
                     <div>
                         Diversity and Inclusion
                     </div>
+                </div>
+            </div>
+
+            <Divider />
+            <div className="home-title">
+                <div className="title">
+                Acknowledgement
+                </div>
+
+                <div className="paragraph">
+                <LoremIpsum p={1} />
                 </div>
             </div>
 
