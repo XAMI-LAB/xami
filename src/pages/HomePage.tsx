@@ -1,4 +1,4 @@
-import { Card, Col, Divider, Row } from 'antd'
+import { Card, Col, Divider, Row, BackTop } from 'antd'
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
 import React from 'react';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
@@ -16,6 +16,7 @@ export default function HomePage() {
 
     return (
         <div className={`home-content`} style={{ marginLeft: screen.md ? "15%": "0%", maxWidth: screen.md ? "70%": "100%"}}>
+            <BackTop />
             <div className="home-title">
                 <div className="title">Welcome to XAMI Lab @QUT!</div>
                 <div className="description">Supporting Human-Machine Collaboration and Co-evolution <br/>by Explainable Analytics for Machine Intelligence </div>

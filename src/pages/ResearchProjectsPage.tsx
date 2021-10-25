@@ -1,6 +1,6 @@
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
 import React from 'react'
-import {Divider, Image} from 'antd'
+import {Divider, Image, BackTop } from 'antd'
 import { LoremIpsum } from 'react-lorem-ipsum';
 import '../styles/Base.scss';
 
@@ -9,6 +9,7 @@ export default function ResearchProjectsPage() {
 
     return (
         <div className={`home-content`} style={{ marginLeft: screens.md ? "15%": "0%", maxWidth: screens.md ? "70%": "100%"}}>
+            <BackTop />
             <div className="home-title title">
                 Research Projects
             </div>

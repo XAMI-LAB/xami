@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { allPublications, PublicationDestination, PublicationOutputDto } from '../models/publication';
-import { Button, Input, List, Modal, Row, Space, Select } from 'antd';
+import { Button, Input, List, Modal, Row, Space, Select, BackTop } from 'antd';
 import PublicationQueryParams from '../queryParams/PublicationQueryParams'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilter, faSquare, faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -66,6 +66,7 @@ export default function PublicationsPage() {
 
     return (
         <div className={`home-content`} style={{ marginLeft: screens.md ? "15%": "0%", maxWidth: screens.md ? "70%": "100%"}}>
+            <BackTop />
             <Modal visible={isModalVisible} onOk={() => setIsModalVisible(false)} onCancel={() => setIsModalVisible(false)} footer={null}>
                 <Space direction="horizontal" size="middle">
                     <div >

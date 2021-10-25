@@ -1,4 +1,4 @@
-import { Divider } from 'antd';
+import { Divider, BackTop } from 'antd';
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint'
 import { LoremIpsum } from 'react-lorem-ipsum';
 import React from 'react'
@@ -9,6 +9,7 @@ export default function OurMissionPage() {
 
     return (
         <div className={`home-content`} style={{ marginLeft: screen.md ? "15%": "0%", maxWidth: screen.md ? "70%": "100%"}}>
+            <BackTop />
             <div className="home-title">
                 <div className="title">
                     Our Vision
