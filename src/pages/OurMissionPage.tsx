@@ -36,7 +36,7 @@ export default function OurMissionPage() {
                             </ul>
                         <li>Apply explainable machine intelligence to a wide range of application domains and industry sectors to promote innovative and sustainable industrialization</li>
                         <li>Build collaborative networks and foster multi-stakeholder partnerships in the context of explainable machine intelligence</li>
-                        <li>Cultivate young research students to become new generations of career excellence achievers in AI for Social Good</li>
+                        <li>Cultivate young research students to become new generations of career excellence achievers in Data Science for Social Good</li>
                     </ul>
                 </div>
             </div>
@@ -50,7 +50,7 @@ export default function OurMissionPage() {
                 <div className="paragraph">
                 <ul>
                     <li>
-                        AI for Social Good
+                        Data Science for Social Good
                     </li>
 
                     <li>
