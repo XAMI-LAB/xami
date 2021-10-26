@@ -14,7 +14,7 @@ export default function ResearchProjectsPage() {
                 Research Projects
             </div>
 
-            <div className="section #Explainable-Predictive-Process-Analytics">
+            <div className="section" id="Explainable-Predictive-Process-Analytics">
             Explainable Predictive Process Analytics
             </div>
             <div className="paragraph">
@@ -42,9 +42,9 @@ export default function ResearchProjectsPage() {
                 predictive process analytics. These include but not limited to the following topics: 
             </p>
             <ul>
-            <li>Interpretability-oriented feature representation and feature construction from event logs and relevant contextual data </li>
+            <li>Interpretability-oriented feature construction from event logs and relevant contextual data </li>
             <li>XAI-enabled inspection of process predictive models </li>
-            <li>Buidling robust and interpretable models for process predictions </li>
+            <li>Building robust and interpretable models for process predictions </li>
             <li>Generating user-centric explanations for process predictions </li>
             <li>Evaluation of explainable methods for predictive process Analytics </li>
             </ul>
@@ -62,7 +62,7 @@ export default function ResearchProjectsPage() {
             </div>
             <Divider />
 
-            <div className="section">
+            <div className="section" id="Causal-Models">
                 Probabilistic & Causal Models for Responsible AI
             </div>
             <div className="paragraph">
@@ -99,7 +99,7 @@ export default function ResearchProjectsPage() {
             </div>
             <Divider />
 
-            <div className="section">
+            <div className="section" id="Persuasive-Models">
                 Persuasive Models for Explainable AI
             </div>
             <div className="paragraph">
@@ -127,7 +127,7 @@ export default function ResearchProjectsPage() {
             </div>
             <Divider />
 
-            <div className="section">
+            <div className="section" id="Explainable-Medical">
                 Explainable Medical Diagnostic Systems
             </div>
             <div className="paragraph">
