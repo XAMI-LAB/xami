@@ -126,6 +126,10 @@ export default function OurMissionPage() {
                     <li>
                     QUT International Merit Scholarship 2021 
                     </li>
+
+                    <li>
+                    Higher Degree Research Internship Industry Scholarship 2021 
+                    </li>
                 </ul>
                 </div>
             </div>
