@@ -1,4 +1,4 @@
-import { Card, Col, Divider, Image, Row, Select } from 'antd'
+import { Card, Col, Divider, Row, BackTop } from 'antd'
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
 import React from 'react';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
@@ -16,17 +16,19 @@ export default function HomePage() {
 
     return (
         <div className={`home-content`} style={{ marginLeft: screen.md ? "15%": "0%", maxWidth: screen.md ? "70%": "100%"}}>
+            <BackTop />
             <div className="home-title">
                 <div className="title">Welcome to XAMI Lab @QUT!</div>
-                <div className="description">Explainable Analytics for Machine Intelligence (XAMI) Lab<br />Supporting Human-Machine Collaboration and Co-evolution</div>
+                <div className="description">Supporting Human-Machine Collaboration and Co-evolution <br/>by Explainable Analytics for Machine Intelligence </div>
                 <br />
                 <Divider />
                 <div className="section">About us</div>
                 <div className="paragraph">
-                    The Explainable Analytics for Machine Intelligence Lab provides a wide range of algorithms, methods and techniques to make machine learning models
-                    explainable, transparent, trustworthy and understandable to human-decision makers.
-                    To learn more about this initiative, visit our <Link className="link" to="/members">team</Link>, <Link className="link" to="/research-plan">research projects</Link>,
-                    or read our <Link className="link" to="/publications">publications</Link>.
+                The Explainable Analytics for Machine Intelligence (XAMI) Lab provides a wide range of algorithms, methods and techniques to 
+                make machine learning models explainable, transparent, trustworthy and understandable to human-decision makers. 
+                To learn more about this initiative, meet our <Link className="link" to="/members">team</Link>, explore our <Link className="link" to="/research-projects">research projects</Link>, 
+                and check our <Link className="link" to="/publications">publications</Link>. 
+                Please <a className="link" href="mailto:xami.initiaive@gmail.com" target="_blank" rel="noreferrer"> contact us </a>if you are interested in collaboration.  
                 </div>
                 <Divider />
                 <div className="subsection">Introduction to Explainable Analytics for "Black-Box" Machine Intelligence</div>
@@ -49,10 +51,11 @@ export default function HomePage() {
                                 // TODO: Push to research theme page.
                             }}
                             cover={<img 
-                                alt="exlainble_predictive_process_analytics" 
+                                alt="explainble_predictive_process_analytics" 
                                 src={`${process.env.PUBLIC_URL}/assets/project/predictive-process-analytics-img.png`} />}
                         >
-                            <Card.Meta title={<div className="card-title" >{<Link className="link" to="/research-projects">Explainable Predictive Process Analytics</Link>}</div>} />
+                            <Card.Meta title={<div className="card-title" >{<Link className="link" 
+                                to={"/research-projects"}>Explainable Predictive Process Analytics</Link>}</div>} />
                         </Card>
                     </Col>
                     <Col xs={24} sm={24} md={24} lg={12} xl={12} xxl={6}>

@@ -1,6 +1,7 @@
 import React from 'react'
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
 import MembersSection from '../components/member/MembersSection';
+import { BackTop } from 'antd';
 import { allMembers, MemberOutputDto, OccupationSection } from '../models/member'
 import '../styles/Base.scss'
 
@@ -22,11 +23,13 @@ export default function MembersPage() {
 
     return (
         <div className={`home-content`} style={{ marginLeft: screen.md ? "15%": "0%", maxWidth: screen.md ? "70%": "100%"}}>
+            <BackTop />
             {
                 [
                     getMemberShowingSectionWithOccupation("Leaders", OccupationSection.Leader),
                     getMemberShowingSectionWithOccupation("Collaborators", OccupationSection.Collaborators),
                     getMemberShowingSectionWithOccupation("Researchers", OccupationSection.HDRStudents),
+                    getMemberShowingSectionWithOccupation("External Researchers", OccupationSection.ExternalResearchers),
                 ]
             }
         </div>
