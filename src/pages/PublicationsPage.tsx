@@ -7,7 +7,7 @@ import { faFilter, faSquare, faTimes } from '@fortawesome/free-solid-svg-icons';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
-import { RepoIcon, FileIcon, VideoIcon, RocketIcon, NoteIcon  } from '@primer/octicons-react'
+import { RepoIcon, FileIcon, VideoIcon, RocketIcon, NoteIcon, QuoteIcon   } from '@primer/octicons-react'
 import '../styles/Base.scss';
 
 
@@ -30,6 +30,26 @@ const getColorCodeElement = (destination: PublicationDestination) => {
 
 
 
+function Abstract(props: any) {
+
+    const [isAbsVisible, setIsAbsVisible] = useState(false);
+
+    const showAbs = () => {
+        setIsAbsVisible(true);
+    };
+  
+    const handleOk = () => {
+        setIsAbsVisible(false);
+    };
+
+    return (
+        <>
+        <Button className="publication-button" onClick={showAbs}><QuoteIcon size={16} />&nbsp;&nbsp;Abstract</Button>
+        <Modal title="Abstract" visible={isAbsVisible} onCancel={handleOk} footer={null} width={props.width}> <p style={{fontSize:"16px"}}>{props.Abstract} </p> </Modal>
+        </>
+      );
+}
+
 export default function PublicationsPage() {
 
 
@@ -41,9 +61,11 @@ export default function PublicationsPage() {
         // Action list of members's social icons
     const actionsList = (p: PublicationOutputDto) => {
         var nodeList = [];
+        p.Abstract && nodeList.push( <Abstract Abstract={p.Abstract} width={screens.md ? "40%": "100%"}/>);
         p.doi && nodeList.push( <Button className="publication-button" href={p.doi} target="_blank" rel="noreferrer"><FileIcon size={16} />&nbsp;&nbsp;Paper</Button>);
         p.arXiv && nodeList.push(<Button className="publication-button" href={p.arXiv} target="_blank" rel="noreferrer"><FileIcon size={16} />&nbsp;&nbsp;Paper</Button>);
         p.code && nodeList.push(<Button  className="publication-button" href={p.code} target="_blank" rel="noreferrer"><RepoIcon size={16} /> &nbsp;&nbsp;Code</Button>);
+        // p.code2 && nodeList.push(<Button  className="publication-button" href={p.code2} target="_blank" rel="noreferrer"><RepoIcon size={16} /> &nbsp;&nbsp;Code</Button>);
         p.demo && nodeList.push(<Button  className="publication-button" href={p.demo} target="_blank" rel="noreferrer"><RocketIcon   size={16} /> &nbsp;&nbsp;Demo</Button>);
         p.video && nodeList.push(<Button  className="publication-button" href={p.video} target="_blank" rel="noreferrer"><VideoIcon  size={16} /> &nbsp;&nbsp;Video</Button>);
         p.slide && nodeList.push(<Button  className="publication-button" href={p.slide} target="_blank" rel="noreferrer"><NoteIcon  size={16} /> &nbsp;&nbsp;Slide</Button>);
@@ -104,6 +126,7 @@ export default function PublicationsPage() {
                     }
                 </Space>
                 <Space>
+                    <Button type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: undefined })))} >All</Button>
                     <Button icon={<FontAwesomeIcon style={{ marginTop: "6px", marginRight: "12px" }} size="sm" icon={faSquare} color="#e3812b" />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: PublicationDestination.Arxiv })))} >Arxiv</Button>
                     <Button icon={<FontAwesomeIcon style={{ marginTop: "6px", marginRight: "12px" }} size="sm" icon={faSquare} color="#a31f37" />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: PublicationDestination.Journals })))} >Journal</Button>
                     <Button icon={<FontAwesomeIcon style={{ marginTop: "6px", marginRight: "12px" }} size="sm" icon={faSquare} color="#32628c" />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: PublicationDestination.Conferences })))} >Conference</Button>
@@ -116,6 +139,7 @@ export default function PublicationsPage() {
             <List style={{ marginTop: "30px" }} itemLayout="vertical">
                 {
                     getFilteredPublications().map(p =>
+                        <div>
                         <List.Item key={p.id} >
                             <List.Item.Meta
                                 avatar={getColorCodeElement(p.destination)}
@@ -128,6 +152,8 @@ export default function PublicationsPage() {
                                 description={actionsList(p)}
                             />
                         </List.Item>
+                        {/* <Modal title="Abstract" visible={isAbsVisible}  onCancel={handleOk} footer={null}> <p>{p.Abstract}</p> </Modal> */}
+                        </div>
                     )
                 }
             </List>

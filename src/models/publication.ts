@@ -15,6 +15,9 @@ export interface PublicationOutputDto {
     arXiv?: string;
     code?: string;
     demo?: string;
+    code2?: string;
+    Abstract?: string;
+    bibtex?: string;
 }
 
 
@@ -27,6 +30,8 @@ export const allPublications: PublicationOutputDto[] = [
         destination: PublicationDestination.Conferences,
         doi: "https://doi.org/10.1007/978-3-030-79108-7_8",
         code: "https://github.com/Mythreyi-V/PPA_Evaluation",
+        Abstract: "Predictive process analytics focuses on predicting the future states of running instances of a business process. While advanced machine learning techniques have been used to increase the accuracy of predictions, the resulting predictive models lack transparency. Explainable machine learning methods can be used to interpret black-box models. However, it is unclear how fit for purpose these methods are in explaining process predictive models. In this paper, we aim to investigate the capabilities of two explainable methods, LIME and SHAP, in reproducing the decision-making processes of black-box process predictive models. We focus on fidelity metrics and propose a method to evaluate the faithfulness of LIME and SHAP when explaining process predictive models built on a Gradient Boosting Machine classifier. We conduct the evaluation using three real-life event logs and analyze the fidelity evaluation results to derive insights. The research contributes to evaluating the trustworthiness of explainable methods for predictive process analytics as a fundamental and key step towards human user-oriented evaluation.",
+        bibtex: "",
     },
     {
         id: "2",
@@ -34,8 +39,7 @@ export const allPublications: PublicationOutputDto[] = [
         publishedAt: new Date(2020, 12, 9),
         destination: PublicationDestination.Conferences,
         doi: "https://doi.org/10.1007/978-3-030-65310-1_31",
-
-
+        Abstract: "In the context of business process management, predictive analytics has been applied to making predictions about the future state of an ongoing business process instance, for example, when will the process instance complete and what will be the outcome upon completion. Machine learning models can be trained on event logs of historical process execution to build the underlying predictive models. Multiple techniques have been proposed so far which encode the information available in an event log and construct input features required to train a predictive model. While accuracy has been a dominant criterion in the choice of various techniques, these techniques are often applied as a black-box in building predictive models. In this paper, we derive explanations using interpretable machine learning techniques to compare the suitability of multiple predictive models of high accuracy. The explanations allow us to gain an understanding of the underlying reasons for a prediction and highlight scenarios where accuracy alone may not be sufficient in assessing the suitability of techniques used to encode event log data to features used by a predictive model. Findings from this study further motivate the need to incorporate interpretability in predictive process analytics."
     },
     {
         id: "3",
@@ -43,7 +47,8 @@ export const allPublications: PublicationOutputDto[] = [
         publishedAt: new Date(2020, 9, 4),
         destination: PublicationDestination.Conferences,
         doi: "https://doi.org/10.1007/978-3-030-58666-9_15",
-        code: "https://github.com/renuka98/interpretable_predictive_processmodel"
+        code: "https://github.com/renuka98/interpretable_predictive_processmodel",
+        Abstract:"There has been a growing interest in the literature on the application of deep learning models for predicting business process behaviour, such as the next event in a case, the time for completion of an event, and the remaining execution trace of a case. Although these models provide high levels of accuracy, their sophisticated internal representations provide little or no understanding about the reason for a particular prediction, resulting in them being used as black-boxes. Consequently, an interpretable model is necessary to enable transparency and empower users to evaluate when and how much they can rely on the models. This paper explores an interpretable and accurate attention-based Long Short Term Memory (LSTM) model for predicting business process behaviour. The interpretable model provides insights into the model inputs influencing a prediction, thus facilitating transparency. An experimental evaluation shows that the proposed model capable of supporting interpretability also provides accurate predictions when compared to existing LSTM models for predicting process behaviour. The evaluation further shows that attention mechanisms in LSTM provide a sound approach to generate meaningful interpretations across different tasks in predictive process analytics."
     },
     // Journal
     // {
@@ -64,21 +69,26 @@ export const allPublications: PublicationOutputDto[] = [
         publishedAt: new Date(2021, 4, 9),
         destination: PublicationDestination.Journals,
         doi: "https://doi.org/10.1016/j.dss.2021.113561",
-        code: "https://github.com/catarina-moreira/LINDA_DSS"
+        code: "https://github.com/catarina-moreira/LINDA_DSS",
+        Abstract: "The use of sophisticated machine learning models for critical decision-making faces the challenge that these models are often applied as a ‘black-box’. This has led to an increased interest in interpretable machine learning, where post-hoc model-agnostic algorithms present a useful mechanism for generating interpretations of complex learning models. This paper proposes a novel approach based on Bayesian Networks to generate local post-hoc model-agnostic interpretations of a black-box predictive model. Consequently, the proposed approach presents features that are conditionally dependent between each other and that are directly influencing the class variable. This enables the decision-maker to better understand how features are related and why a certain prediction was made. Compared to the existing post-hoc interpretation methods, the contribution of our approach is three-fold: (1) as a probabilistic graphical model, the extracted Bayesian network can provide interpretations through conditional dependencies in a graphical structure regarding what input features and how/why they contributed to a prediction; (2) for complex decision problems with many features, a Markov blanket can be generated from the extracted Bayesian network to provide interpretations with a focused view on those input features that directly contributed to a prediction; (3) the extracted Bayesian network enables the identification of four different rules which can inform the decision-maker about the confidence level in a prediction, thus helping the decision-maker assess the reliability of predictions learned by a black-box model. We implemented the proposed approach, applied it in the context of two well-known public datasets and analysed the results, which are made available in an open-source repository: https://github.com/catarina-moreira/LINDA_DSS."
     },
     {
         id: "7",
         title: "Wei Tan, Prayag Tiwari, Hari Mohan Pandey, Catarina Moreira, and Amit Kumar Jaiswal, <span style='color:#1890FF'>*Multi-modal medical image fusion algorithm in the era of big data*</span>, Neural Computing and Applications, 2020",
         publishedAt: new Date(2020, 7, 8),
         destination: PublicationDestination.Journals,
-        doi: "https://doi.org/10.1007/s00521-020-05173-2"
+        doi: "https://doi.org/10.1007/s00521-020-05173-2",
+        Abstract: "In image-based medical decision-making, different modalities of medical images of a given organ of a patient are captured. Each of these images will represent a modality that will render the examined organ differently, leading to different observations of a given phenomenon (such as stroke). The accurate analysis of each of these modalities promotes the detection of more appropriate medical decisions. Multimodal medical imaging is a research field that consists in the development of robust algorithms that can enable the fusion of image information acquired by different sets of modalities. In this paper, a novel multimodal medical image fusion algorithm is proposed for a wide range of medical diagnostic problems. It is based on the application of a boundary measured pulse-coupled neural network fusion strategy and an energy attribute fusion strategy in a non-subsampled shearlet transform domain. Our algorithm was validated in dataset with modalities of several diseases, namely glioma, Alzheimer’s, and metastatic bronchogenic carcinoma, which contain more than 100 image pairs. Qualitative and quantitative evaluation verifies that the proposed algorithm outperforms most of the current algorithms, providing important ideas for medical diagnosis.",
+
     },
     {
         id: "8",
         title: "Vikash Chouhan, Sanjay Kumar Singh, Aditya Khamparia, Deepak Gupta, Prayag Tiwari, Catarina Moreira, Robertas Damasevicius, Victor Hugo C. de Albuquerque, <span style='color:#1890FF'>*A Novel Transfer Learning Based Approach for Pneumonia Detection in Chest X-ray Images*</span>, Applied Sciences, 10, 559, 2020.",
         publishedAt: new Date(2020, 1, 12),
         destination: PublicationDestination.Journals,
-        doi: "https://doi.org/10.3390/app10020559"
+        doi: "https://doi.org/10.3390/app10020559",
+        Abstract: "Pneumonia is among the top diseases which cause most of the deaths all over the world. Virus, bacteria and fungi can all cause pneumonia. However, it is difficult to judge the pneumonia just by looking at chest X-rays. The aim of this study is to simplify the pneumonia detection process for experts as well as for novices. We suggest a novel deep learning framework for the detection of pneumonia using the concept of transfer learning. In this approach, features from images are extracted using different neural network models pretrained on ImageNet, which then are fed into a classifier for prediction. We prepared five different models and analyzed their performance. Thereafter, we proposed an ensemble model that combines outputs from all pretrained models, which outperformed individual models, reaching the state-of-the-art performance in pneumonia recognition. Our ensemble model reached an accuracy of 96.4% with a recall of 99.62% on unseen data from the Guangzhou Women and Children’s Medical Center dataset. ",
+
     },
     {
         id: "9",
@@ -87,21 +97,29 @@ export const allPublications: PublicationOutputDto[] = [
         destination: PublicationDestination.Arxiv,
         arXiv: "https://arxiv.org/abs/2109.01419",
         code: "https://github.com/ZhipengHe/Shared-and-Specialised-Attention-based-Interpretable-Models",
+        Abstract: 'In this paper, we address the "black-box" problem in predictive process analytics by building interpretable models that are capable to inform both what and why is a prediction. Predictive process analytics is a newly emerged discipline dedicated to providing business process intelligence in modern organisations. It uses event logs, which capture process execution traces in the form of multi-dimensional sequence data, as the key input to train predictive models. These predictive models, often built upon deep learning techniques, can be used to make predictions about the future states of business process execution. We apply attention mechanism to achieve model interpretability. We propose i) two types of attentions: event attention to capture the impact of specific process events on a prediction, and attribute attention to reveal which attribute(s) of an event influenced the prediction; and ii) two attention mechanisms: shared attention mechanism and specialised attention mechanism to reflect different design decisions in when to construct attribute attention on individual input features (specialised) or using the concatenated feature tensor of all input feature vectors (shared). These lead to two distinct attention-based models, and both are interpretable models that incorporate interpretability directly into the structure of a process predictive model. We conduct experimental evaluation of the proposed models using real-life dataset, and comparative analysis between the models for accuracy and interpretability, and draw insights from the evaluation and analysis results.',
+        
     },
     {
         id: "10",
         title: "Chun Ouyang, Renuka Sindhgatta, Catarina Moreira, <span style='color:#1890FF'>*Explainable AI Enabled Inspection of Business Process Prediction Models*</span>. CoRR abs/2107.09767 (2021)",
         publishedAt: new Date(2021, 7, 16),
         destination: PublicationDestination.Arxiv,
-        arXiv: "https://arxiv.org/abs/2107.09767"
+        arXiv: "https://arxiv.org/abs/2107.09767",
+        code: "https://git.io/Je186",
+        code2: "https://git.io/Je1XZ",
+        Abstract:"Modern data analytics underpinned by machine learning techniques has become a key enabler to the automation of data-led decision making. As an important branch of state-of-the-art data analytics, business process predictions are also faced with a challenge in regard to the lack of explanation to the reasoning and decision by the underlying `black-box' prediction models. With the development of interpretable machine learning techniques, explanations can be generated for a black-box model, making it possible for (human) users to access the reasoning behind machine learned predictions. In this paper, we aim to present an approach that allows us to use model explanations to investigate certain reasoning applied by machine learned predictions and detect potential issues with the underlying methods thus enhancing trust in business process prediction models. A novel contribution of our approach is the proposal of model inspection that leverages both the explanations generated by interpretable machine learning mechanisms and the contextual or domain knowledge extracted from event logs that record historical process execution. Findings drawn from this work are expected to serve as a key input to developing model reliability metrics and evaluation in the context of business process predictions.",
+
     },
     {
         id: "11",
         title: "Chihcheng Hsieh, Catarina Moreira, Chun Ouyang, <span style='color:#1890FF'>*DiCE4EL: Interpreting Process Predictions using a Milestone-Aware Counterfactual Approach*</span>, In Proceedings of the 3rd International Conference on Process Mining, 2021",
         publishedAt: new Date(2021, 1, 1),
         destination: PublicationDestination.Conferences,
-        doi: "",
-        code: "https://github.com/ChihchengHsieh/EventLogDiCE"
+        doi: "https://doi.org/10.1109/ICPM53251.2021.9576881",
+        code: "https://github.com/ChihchengHsieh/EventLogDiCE",
+        Abstract: "Predictive process analytics often apply machine learning to predict the future states of a running business process. However, the internal mechanisms of many existing predictive algorithms are opaque and a human decision-maker is unable to understand why a certain activity was predicted. Recently, counterfactuals have been proposed in the literature to derive human-understandable explanations from predictive models. Current counterfactual approaches consist of finding the minimum feature change that can make a certain prediction flip its outcome. Although many algorithms have been proposed, their application to multi-dimensional sequence data like event logs has not been explored in the literature.In this paper, we explore the use of a recent, popular model-agnostic counterfactual algorithm, DiCE, in the context of predictive process analytics. The analysis reveals that DiCE is unable to derive explanations for process predictions, due to (1) process domain knowledge not being taken into account, (2) long traces of process execution that often tend to be less understandable, and (3) difficulties in optimising the counterfactual search with categorical variables. We design an extension of DiCE, namely DiCE4EL (DiCE for Event Logs), that can generate counterfactual explanations for process prediction, and propose an approach that supports deriving milestone-aware counterfactual explanations at key intermediate stages along process execution to promote interpretability. We apply our approach to a publicly available real-life event log and the analysis results demonstrate the effectiveness of the proposed approach.",
+        
     },
     {
         id: "12",
@@ -109,7 +127,9 @@ export const allPublications: PublicationOutputDto[] = [
         publishedAt: new Date(2021, 6, 16),
         destination: PublicationDestination.Arxiv,
         arXiv:"https://arxiv.org/abs/2106.08492",
-        code: "https://github.com/Mythreyi-V/three-phase-fidelity-evaluation/"
+        code: "https://github.com/Mythreyi-V/three-phase-fidelity-evaluation/",
+        Abstract: "Although modern machine learning and deep learning methods allow for complex and in-depth data analytics, the predictive models generated by these methods are often highly complex, and lack transparency. Explainable AI (XAI) methods are used to improve the interpretability of these complex models, and in doing so improve transparency. However, the inherent fitness of these explainable methods can be hard to evaluate. In particular, methods to evaluate the fidelity of the explanation to the underlying black box require further development, especially for tabular data. In this paper, we (a) propose a three phase approach to developing an evaluation method; (b) adapt an existing evaluation method primarily for image and text data to evaluate models trained on tabular data; and (c) evaluate two popular explainable methods using this evaluation method. Our evaluations suggest that the internal mechanism of the underlying predictive model, the internal mechanism of the explainable method used and model and data complexity all affect explanation fidelity. Given that explanation fidelity is so sensitive to context and tools and data used, we could not clearly identify any specific explainable method as being superior to another.",
+
     },
     {
         id: "13",
@@ -117,7 +137,9 @@ export const allPublications: PublicationOutputDto[] = [
         publishedAt: new Date(2021, 3, 7),
         destination: PublicationDestination.Arxiv,
         arXiv: "https://arxiv.org/abs/2103.04244",
-        code: ""
+        code: "",
+        Abstract: "There has been a growing interest in model-agnostic methods that can make deep learning models more transparent and explainable to a user. Some researchers recently argued that for a machine to achieve a certain degree of human-level explainability, this machine needs to provide human causally understandable explanations, also known as causability. A specific class of algorithms that have the potential to provide causability are counterfactuals. This paper presents an in-depth systematic review of the diverse existing body of literature on counterfactuals and causability for explainable artificial intelligence. We performed an LDA topic modelling analysis under a PRISMA framework to find the most relevant literature articles. This analysis resulted in a novel taxonomy that considers the grounding theories of the surveyed algorithms, together with their underlying properties and applications in real-world data. This research suggests that current model-agnostic counterfactual algorithms for explainable AI are not grounded on a causal theoretical formalism and, consequently, cannot promote causability to a human decision-maker. Our findings suggest that the explanations derived from major algorithms in the literature provide spurious correlations rather than cause/effects relationships, leading to sub-optimal, erroneous or even biased explanations. This paper also advances the literature with new directions and challenges on promoting causability in model-agnostic approaches for explainable artificial intelligence.",
+
     }
 ];
 
