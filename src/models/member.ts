@@ -273,5 +273,20 @@ export const allMembers: MemberOutputDto[] = [
         scholar: "",
         school: "Instituto Superior Técnico",
         university: "University of Lisbon",
+    },
+    {
+        id: "18",
+        name: "Diogo Alvito",
+        occupation: OccupationSection.ExternalResearchers,
+        profileImage: "https://res.cloudinary.com/zhipenghe/image/upload/c_crop,g_face,h_822,w_666/v1636075375/Diogo_wbcwq6.jpg",
+        orderNumber: 3,
+        occupationSub: "Master Student",
+        email: "",
+        linkedIn: "https://www.linkedin.com/in/diogoalvito",
+        homepage: "",
+        github: "",
+        scholar: "",
+        school: "Instituto Superior Técnico",
+        university: "University of Lisbon",
     }
 ];
