@@ -11,6 +11,7 @@ export interface MemberOutputDto {
     id: string;
     name: string;
     occupation: OccupationSection;
+    selected: boolean;
     profileImage?: string;
     occupationSub?: string;
     school?: string;
@@ -25,8 +26,10 @@ export interface MemberOutputDto {
 
 
 export const allMembers: MemberOutputDto[] = [
+    // Leader
     {
-        id: "1",
+        id: "l-1",
+        selected: true,
         name: "Dr. Chun Ouyang",
         occupation: OccupationSection.Leader,
         profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1620301124/rhju6s6uoldcnxmw7c0o.jpg",
@@ -41,7 +44,8 @@ export const allMembers: MemberOutputDto[] = [
         scholar: "https://scholar.google.com.au/citations?user=aQqD_CQAAAAJ",
     },
     {
-        id: "2",
+        id: "l-2",
+        selected: true,
         name: "Dr. Catarina Moreira",
         occupation: OccupationSection.Leader,
         profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535125/vtyukjmxpoy2afzfpzfj.png",
@@ -55,8 +59,11 @@ export const allMembers: MemberOutputDto[] = [
         github: "",
         scholar: "https://scholar.google.com/citations?user=nThsEsMAAAAJ",
     },
+
+    // Collaborators
     {
-        id: "3",
+        id: "c-1",
+        selected: true,
         name: "Dr. Renuka Sindhgatta",
         occupation: OccupationSection.Collaborators,
         profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1621573588/begjin9xq99zcs3m89je.jpg",
@@ -70,7 +77,8 @@ export const allMembers: MemberOutputDto[] = [
         github: "",
     },
     {
-        id: "4",
+        id: "c-2",
+        selected: true,
         name: "A/Prof. Yue Xu",
         occupation: OccupationSection.Collaborators,
         profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1621573622/israd7mxvdxd5gbljesp.jpg",
@@ -84,34 +92,53 @@ export const allMembers: MemberOutputDto[] = [
         linkedIn: "https://www.linkedin.com/in/yue-xu-7368b133"
     },
     {
-        id: "5",
+        id: "c-3",
+        selected: true,
         name: "Prof. Joaquim Jorge",
         occupation: OccupationSection.Collaborators,
         profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535448/jvdkcyvgrqu5foyvxpd2.jpg",
         occupationSub: "",
         school: "Instituto Superior Técnico",
         university: "University of Lisbon",
-        orderNumber: 3,
+        orderNumber: 4,
         email: "jorgej©tecnico.ulisboa.pt",
         homepage: "https://web.ist.utl.pt/jorgej/",
         scholar: "https://scholar.google.com/citations?user=RgiMdpAAAAAJ",
         linkedIn: "https://www.linkedin.com/in/jorgej",
     },
     {
-        id: "6",
+        id: "c-4",
+        selected: true,
         name: "Prof. Alistair Barros",
         occupation: OccupationSection.Collaborators,
         profileImage: "https://res.cloudinary.com/zhipenghe/image/upload/v1633678145/Alistair-Barros_1_vkkwno.jpg",
         occupationSub: "",
         school: "School of Information Systems",
         university: "QUT",
-        orderNumber: 4,
+        orderNumber: 5,
         email: "alistair.barros@qut.edu.au",
         homepage: "https://www.qut.edu.au/about/our-people/academic-profiles/alistair.barros",
         linkedIn: "https://www.linkedin.com/in/alistairbarros/"
     },
     {
+        id: "c-5",
+        selected: true,
+        name: "Prof. Margot Brereton",
+        occupation: OccupationSection.Collaborators,
+        profileImage: "https://res.cloudinary.com/zhipenghe/image/upload/v1653014437/Margot-brereton-small_gvcgw2.jpg",
+        occupationSub: "",
+        school: "School of Computer Science",
+        university: "QUT",
+        orderNumber: 3,
+        email: "m.brereton@qut.edu.au",
+        homepage: "https://www.qut.edu.au/about/our-people/academic-profiles/m.brereton",
+        linkedIn: "https://www.linkedin.com/in/margot-brereton-130015a"
+    },
+
+    // HDRStudents
+    {
         id: "7",
+        selected: true,
         name: "Mythreyi\n Velmurugan",
         occupation: OccupationSection.HDRStudents,
         profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535615/v2pxj7ommlm6a4uccuhp.jpg",
@@ -127,6 +154,7 @@ export const allMembers: MemberOutputDto[] = [
     },
     {
         id: "8",
+        selected: true,
         name: "Yu-Liang Chou\n (Leon)",
         occupation: OccupationSection.HDRStudents,
         profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535686/lolnxfe64mt8vydthdlk.jpg",
@@ -142,6 +170,7 @@ export const allMembers: MemberOutputDto[] = [
     },
     {
         id: "9",
+        selected: true,
         name: "Peng Yu\n (Kenny)",
         occupation: OccupationSection.HDRStudents,
         profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535769/cbyv9gnmzbzlc5hmoc3s.jpg",
@@ -157,6 +186,7 @@ export const allMembers: MemberOutputDto[] = [
     },
     {
         id: "10",
+        selected: true,
         name: "Bemali\n Wickramanayake",
         occupation: OccupationSection.HDRStudents,
         profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535852/efc2p3t0h1soojoksmdi.png",
@@ -172,13 +202,14 @@ export const allMembers: MemberOutputDto[] = [
     },
     {
         id: "11",
+        selected: true,
         name: "Jia Wei\n (Jenny)",
         occupation: OccupationSection.HDRStudents,
         profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1620277624/rx31uwskj5lh26vpf8ws.jpg",
         occupationSub: "PhD Student",
         orderNumber: 6,
         email: "jia.wei@hdr.qut.edu.au",
-        linkedIn: "",
+        linkedIn: "https://www.linkedin.com/in/jia-jenny-wei-203795132/",
         scholar: "",
         homepage: "",
         github: "",
@@ -187,6 +218,7 @@ export const allMembers: MemberOutputDto[] = [
     },
     {
         id: "12",
+        selected: true,
         name: 'Chihcheng Hsieh\n (Richard)',
         occupation: OccupationSection.HDRStudents,
         profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619954466/frip22rpmow3rmas33lg.jpg",
@@ -202,12 +234,14 @@ export const allMembers: MemberOutputDto[] = [
     },
     {
         id: "13",
+        selected: true,
         name: "Zhipeng He\n (Zippo) ",
         occupation: OccupationSection.HDRStudents,
-        profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1621732433/hb4j78tkbsewdqnhdvzw.jpg",
-        occupationSub: "Honours Student",
+        // profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1621732433/hb4j78tkbsewdqnhdvzw.jpg",
+        profileImage: "https://res.cloudinary.com/zhipenghe/image/upload/v1652426914/20220513_071031355_iOS_e4dceo.jpg",
+        occupationSub: "PhD Student",
         orderNumber: 8,
-        email: "zhipeng.he@connect.qut.edu.au",
+        email: "zhipeng.he@hdr.qut.edu.au",
         linkedIn: "https://www.linkedin.com/in/zhipenghe",
         homepage: "https://zhipenghe.me",
         github: "https://github.com/ZhipengHe",
@@ -217,6 +251,7 @@ export const allMembers: MemberOutputDto[] = [
     },
     {
         id: "14",
+        selected: true,
         name: "Jing Yang\n (Roy)",
         occupation: OccupationSection.HDRStudents,
         profileImage: "https://res.cloudinary.com/zhipenghe/image/upload/v1633505346/avatar_dr4ypx.jpg",
@@ -232,6 +267,7 @@ export const allMembers: MemberOutputDto[] = [
     },
     {
         id: "15",
+        selected: true,
         name: "Giuseppe\n Jordão",
         occupation: OccupationSection.HDRStudents,
         profileImage: "https://res.cloudinary.com/zhipenghe/image/upload/v1633574090/GetAttachmentThumbnail_ihcpdc.jpg",
@@ -245,8 +281,11 @@ export const allMembers: MemberOutputDto[] = [
         school: "School of Information Systems",
         university: "QUT",
     },
+
+    // ExternalResearchers
     {
         id: "16",
+        selected: true,
         name: "Gonçalo Almeida",
         occupation: OccupationSection.ExternalResearchers,
         profileImage: "https://res.cloudinary.com/zhipenghe/image/upload/v1633680762/GetAttachmentThumbnail_zxf6mt.jpg",
@@ -261,6 +300,7 @@ export const allMembers: MemberOutputDto[] = [
     },
     {
         id: "17",
+        selected: true,
         name: "André Luís",
         occupation: OccupationSection.ExternalResearchers,
         profileImage: "https://res.cloudinary.com/zhipenghe/image/upload/v1634702772/andre.luis_xl4yu2.jpg",
@@ -276,6 +316,7 @@ export const allMembers: MemberOutputDto[] = [
     },
     {
         id: "18",
+        selected: true,
         name: "Diogo Alvito",
         occupation: OccupationSection.ExternalResearchers,
         profileImage: "https://res.cloudinary.com/zhipenghe/image/upload/c_crop,g_face,h_822,w_666/v1636075375/Diogo_wbcwq6.jpg",

@@ -11,7 +11,8 @@ export default function MembersPage() {
     const members = allMembers;
 
     const getMemberShowingSectionWithOccupation = (title: string, occupationSection: OccupationSection) => {
-        var membersInSection = members.filter(m => m.occupation === occupationSection).sort((a: MemberOutputDto, b: MemberOutputDto) => a.orderNumber - b.orderNumber);
+        // filter m for all occupations, filter n for select or not
+        var membersInSection = members.filter(m => m.occupation === occupationSection).filter(n => n.selected === true).sort((a: MemberOutputDto, b: MemberOutputDto) => a.orderNumber - b.orderNumber);
         if (membersInSection.length > 0) {
             return <div style={{ marginBottom: "5vh" }}>
                 <MembersSection key={title} members={membersInSection} title={title} />

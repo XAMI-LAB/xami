@@ -92,10 +92,10 @@ export const allPublications: PublicationOutputDto[] = [
     },
     {
         id: "9",
-        title: "Bemali Wickramanayake, Zhipeng He, Chun Ouyang, Catarina Moreira, Yue Xu, Renuka Sindhgatta, <span style='color:#1890FF'>*Building Interpretable Models for Business Process Prediction using Shared and Specialised Attention Mechanisms*</span>. CoRR abs/2109.01419 (2021)",
-        publishedAt: new Date(2021, 9, 3),
-        destination: PublicationDestination.Arxiv,
-        arXiv: "https://arxiv.org/abs/2109.01419",
+        title: "Bemali Wickramanayake, Zhipeng He, Chun Ouyang, Catarina Moreira, Yue Xu, Renuka Sindhgatta, <span style='color:#1890FF'>*Building Interpretable Models for Business Process Prediction using Shared and Specialised Attention Mechanisms*</span>. Knowledge-Based Systems, 248, 108773, 2022.",
+        publishedAt: new Date(2022, 7, 19),
+        destination: PublicationDestination.Journals,
+        doi: "https://doi.org/10.1016/j.knosys.2022.108773",
         code: "https://github.com/ZhipengHe/Shared-and-Specialised-Attention-based-Interpretable-Models",
         Abstract: 'In this paper, we address the "black-box" problem in predictive process analytics by building interpretable models that are capable to inform both what and why is a prediction. Predictive process analytics is a newly emerged discipline dedicated to providing business process intelligence in modern organisations. It uses event logs, which capture process execution traces in the form of multi-dimensional sequence data, as the key input to train predictive models. These predictive models, often built upon deep learning techniques, can be used to make predictions about the future states of business process execution. We apply attention mechanism to achieve model interpretability. We propose i) two types of attentions: event attention to capture the impact of specific process events on a prediction, and attribute attention to reveal which attribute(s) of an event influenced the prediction; and ii) two attention mechanisms: shared attention mechanism and specialised attention mechanism to reflect different design decisions in when to construct attribute attention on individual input features (specialised) or using the concatenated feature tensor of all input feature vectors (shared). These lead to two distinct attention-based models, and both are interpretable models that incorporate interpretability directly into the structure of a process predictive model. We conduct experimental evaluation of the proposed models using real-life dataset, and comparative analysis between the models for accuracy and interpretability, and draw insights from the evaluation and analysis results.',
         
@@ -133,14 +133,49 @@ export const allPublications: PublicationOutputDto[] = [
     },
     {
         id: "13",
-        title: "Yu-Liang Chou, Catarina Moreira, Peter Bruza, Chun Ouyang, Joaquim A. Jorge, <span style='color:#1890FF'>*Counterfactuals and Causability in Explainable Artificial Intelligence: Theory, Algorithms, and Applications*</span>. CoRR abs/2103.04244 (2021)",
-        publishedAt: new Date(2021, 3, 7),
-        destination: PublicationDestination.Arxiv,
-        arXiv: "https://arxiv.org/abs/2103.04244",
+        title: "Yu-Liang Chou, Catarina Moreira, Peter Bruza, Chun Ouyang, Joaquim A. Jorge, <span style='color:#1890FF'>*Counterfactuals and Causability in Explainable Artificial Intelligence: Theory, Algorithms, and Applications*</span>. Information Fusion 81, 59-83, 2022",
+        publishedAt: new Date(2022, 5, 1),
+        destination: PublicationDestination.Journals,
+        // arXiv: "https://arxiv.org/abs/2103.04244",
+        doi: "https://doi.org/10.1016/j.inffus.2021.11.003",
         code: "",
         Abstract: "There has been a growing interest in model-agnostic methods that can make deep learning models more transparent and explainable to a user. Some researchers recently argued that for a machine to achieve a certain degree of human-level explainability, this machine needs to provide human causally understandable explanations, also known as causability. A specific class of algorithms that have the potential to provide causability are counterfactuals. This paper presents an in-depth systematic review of the diverse existing body of literature on counterfactuals and causability for explainable artificial intelligence. We performed an LDA topic modelling analysis under a PRISMA framework to find the most relevant literature articles. This analysis resulted in a novel taxonomy that considers the grounding theories of the surveyed algorithms, together with their underlying properties and applications in real-world data. This research suggests that current model-agnostic counterfactual algorithms for explainable AI are not grounded on a causal theoretical formalism and, consequently, cannot promote causability to a human decision-maker. Our findings suggest that the explanations derived from major algorithms in the literature provide spurious correlations rather than cause/effects relationships, leading to sub-optimal, erroneous or even biased explanations. This paper also advances the literature with new directions and challenges on promoting causability in model-agnostic approaches for explainable artificial intelligence.",
 
-    }
+    },
+    {
+        id: "14",
+        title: "Bemali Wickramanayake, Chun Ouyang, Catarina Moreira, Yue Xu, <span style='color:#1890FF'>*Generating Purpose-Driven Explanations: The Case of Process Predictive Model Inspection*</span>, In Proceedings of the 34th International Conference on Advanced Information Systems Engineering (CAiSE) Forum, 2022",
+        publishedAt: new Date(2022, 6, 6),
+        destination: PublicationDestination.Conferences,
+        doi:"",
+        Abstract:"Explainable AI is an emerging branch of data science that focuses on demystifying the complex computation logic of machine learning with an aim to improve the transparency, validity and trust in automated decisions. While existing research focuses on building methods and techniques to explain ‘black-box’ models, much attention has not been paid to generating model explanations. Effective model explanations are often driven by the purpose of explanation in a given problem context. In this paper, we propose a framework to support generating model explanations for the purpose of model inspection in the context of predictive process analytics. We build a visual explanation platform as an implementation of the proposed framework for inspecting and analysing a process predictive model, and demonstrate the applicability of the framework using a real-life case study on a loan application process."
+    },
+    {
+        id: "15",
+        title: "Jing Yang, Chun Ouyang, Guvenc Dik, Paul Corry, Arthur ter Hofstede, <span style='color:#1890FF'>*Crop Harvest Forecast via Agronomy-informed Process Modelling and Predictive Monitoring*</span>, In Proceedings of the 34th International Conference on Advanced Information Systems Engineering (CAiSE), 2022",
+        publishedAt: new Date(2022, 6, 6),
+        destination: PublicationDestination.Conferences,
+        doi:"",
+        Abstract:""
+    },
+    {
+        id: "16",
+        title: "Yu-Liang Chou, Chihcheng Hsieh, Catarina Moreira, Chun Ouyang, Joaquim Jorge, João Madeiras Pereira, <span style='color:#1890FF'>*Benchmark Evaluation of Counterfactual Algorithms for XAI: From a White Box to a Black Box*</span>. CoRR abs/2203.02399 (2022)",
+        publishedAt: new Date(2022, 3, 4),
+        destination: PublicationDestination.Arxiv,
+        arXiv: "https://arxiv.org/abs/2203.02399",
+        Abstract: "Counterfactual explanations have recently been brought to light as a potentially crucial response to obtaining human-understandable explanations from predictive models in Explainable Artificial Intelligence (XAI). Despite the fact that various counterfactual algorithms have been proposed, the state of the art research still lacks standardised protocols to evaluate the quality of counterfactual explanations. In this work, we conducted a benchmark evaluation across different model agnostic counterfactual algorithms in the literature (DiCE, WatcherCF, prototype, unjustifiedCF), and we investigated the counterfactual generation process on different types of machine learning models ranging from a white box (decision tree) to a grey-box (random forest) and a black box (neural network). We evaluated the different counterfactual algorithms using several metrics including proximity, interpretability and functionality for five datasets. The main findings of this work are the following: (1) without guaranteeing plausibility in the counterfactual generation process, one cannot have meaningful evaluation results. This means that all explainable counterfactual algorithms that do not take into consideration plausibility in their internal mechanisms cannot be evaluated with the current state of the art evaluation metrics; (2) the counterfactual generated are not impacted by the different types of machine learning models; (3) DiCE was the only tested algorithm that was able to generate actionable and plausible counterfactuals, because it provides mechanisms to constraint features; (4) WatcherCF and UnjustifiedCF are limited to continuous variables and can not deal with categorical data.",
+    },
+    {
+        id: "17",
+        title: "Mythreyi Velmurugan, Chun Ouyang, Catarina Moreira, Renuka Sindhgatta, <span style='color:#1890FF'>*Evaluating Stability of Post-hoc Explanations for Business Process Predictions</span>, In Proceedings of the 19th International Conference on Service-Oriented Computing, 49-64, 2021",
+        publishedAt: new Date(2021, 11, 18),
+        destination: PublicationDestination.Conferences,
+        doi: "https://doi.org/10.1007/978-3-030-91431-8_4",
+        code: "https://github.com/Mythreyi-V/PPA_Stability",
+        Abstract: "Predictive process analytics uses advanced machine learning techniques to accurately predict future states of running business processes. Given the complexity of these predictive models, explainable AI techniques are also required to enable informed decision-making. However, few studies evaluate the quality of explanations provided by existing methods to explain business process predictions. In this paper, we attempt to evaluate the consistency of explanations produced for process predictions by two popular explainable methods. We propose that methods and metrics to assess feature selection algorithms can be used to evaluate explanation stability. We use these metrics to assess explanations produced by LIME and SHAP. Our findings indicate that explanation stability may depend on dataset characteristics, feature construction methods and predictive model characteristics. In addition, we also find that, though stable explanations are needed for informed decision-making, unexpected behaviour in explanation stability can act as a diagnostic tool to determine model quality.",
+    },
+
 ];
 
 
