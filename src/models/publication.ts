@@ -175,6 +175,14 @@ export const allPublications: PublicationOutputDto[] = [
         code: "https://github.com/Mythreyi-V/PPA_Stability",
         Abstract: "Predictive process analytics uses advanced machine learning techniques to accurately predict future states of running business processes. Given the complexity of these predictive models, explainable AI techniques are also required to enable informed decision-making. However, few studies evaluate the quality of explanations provided by existing methods to explain business process predictions. In this paper, we attempt to evaluate the consistency of explanations produced for process predictions by two popular explainable methods. We propose that methods and metrics to assess feature selection algorithms can be used to evaluate explanation stability. We use these metrics to assess explanations produced by LIME and SHAP. Our findings indicate that explanation stability may depend on dataset characteristics, feature construction methods and predictive model characteristics. In addition, we also find that, though stable explanations are needed for informed decision-making, unexpected behaviour in explanation stability can act as a diagnostic tool to determine model quality.",
     },
+    {
+        id: "18",
+        title: "Catarina Moreira, Isabel Blanco Nobre, Sandra Costa Sousa, Joao Madeiras Pereira, Joaquim Jorge, <span style='color:#1890FF'>**</span>, In Proceedings of 2022 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW), 450-453, 2022",
+        publishedAt: new Date(2022, 3, 12),
+        destination: PublicationDestination.Conferences,
+        doi: "https://www.doi.org/10.1109/VRW55335.2022.00099",
+        Abstract: "There is a growing need to assist radiologists in performing X-ray readings and diagnoses fast, comfortably, and effectively. As radiologists strive to maximize productivity, it is essential to consider the impact of reading rooms in interpreting complex examinations and ensure that higher volume and reporting speeds do not compromise patient outcomes. Virtual Reality (VR) is a disruptive technology for clinical practice in assessing X-ray images. We argue that conjugating eye-tracking with VR devices and Machine Learning may overcome obstacles posed by inadequate ergonomic postures and poor room conditions that often cause erroneous diagnostics when professionals examine digital images",
+    }
 
 ];
 

@@ -170,7 +170,7 @@ export const allMembers: MemberOutputDto[] = [
     },
     {
         id: "9",
-        selected: true,
+        selected: false,
         name: "Peng Yu\n (Kenny)",
         occupation: OccupationSection.HDRStudents,
         profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535769/cbyv9gnmzbzlc5hmoc3s.jpg",
@@ -267,7 +267,7 @@ export const allMembers: MemberOutputDto[] = [
     },
     {
         id: "15",
-        selected: true,
+        selected: false,
         name: "Giuseppe\n Jordão",
         occupation: OccupationSection.HDRStudents,
         profileImage: "https://res.cloudinary.com/zhipenghe/image/upload/v1633574090/GetAttachmentThumbnail_ihcpdc.jpg",
