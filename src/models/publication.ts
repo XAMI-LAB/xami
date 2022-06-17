@@ -145,18 +145,19 @@ export const allPublications: PublicationOutputDto[] = [
     {
         id: "14",
         title: "Bemali Wickramanayake, Chun Ouyang, Catarina Moreira, Yue Xu, <span style='color:#1890FF'>*Generating Purpose-Driven Explanations: The Case of Process Predictive Model Inspection*</span>, In Proceedings of the 34th International Conference on Advanced Information Systems Engineering (CAiSE) Forum, 2022",
-        publishedAt: new Date(2022, 6, 6),
+        publishedAt: new Date(2022, 5, 28),
         destination: PublicationDestination.Conferences,
-        doi:"",
+        doi:"https://doi.org/10.1007/978-3-031-07481-3_14",
+        demo: "https://tinyurl.com/Visualexplanation4inspection",
         Abstract:"Explainable AI is an emerging branch of data science that focuses on demystifying the complex computation logic of machine learning with an aim to improve the transparency, validity and trust in automated decisions. While existing research focuses on building methods and techniques to explain ‘black-box’ models, much attention has not been paid to generating model explanations. Effective model explanations are often driven by the purpose of explanation in a given problem context. In this paper, we propose a framework to support generating model explanations for the purpose of model inspection in the context of predictive process analytics. We build a visual explanation platform as an implementation of the proposed framework for inspecting and analysing a process predictive model, and demonstrate the applicability of the framework using a real-life case study on a loan application process."
     },
     {
         id: "15",
         title: "Jing Yang, Chun Ouyang, Guvenc Dik, Paul Corry, Arthur ter Hofstede, <span style='color:#1890FF'>*Crop Harvest Forecast via Agronomy-informed Process Modelling and Predictive Monitoring*</span>, In Proceedings of the 34th International Conference on Advanced Information Systems Engineering (CAiSE), 2022",
-        publishedAt: new Date(2022, 6, 6),
+        publishedAt: new Date(2022, 6, 3),
         destination: PublicationDestination.Conferences,
-        doi:"",
-        Abstract:""
+        doi:"https://doi.org/10.1007/978-3-031-07472-1_12",
+        Abstract:"Reliable and timely forecasts on crop harvest bring significant benefits to agri-food industries by providing valuable input to complex decisions on production planning. Useful predictions on crop harvest require continual effort by seasoned field agronomists. However, they are often scarce resources in the real-world. A feasible way to facilitate crop harvest forecast is through developing predictive models that can exploit data relevant to crop growth and automatically generate consistent predictions. To this end, this paper presents our design of a systematic and data-driven approach to supporting online forecasts on crop harvest. Underpinned by process modelling and predictive monitoring techniques, our approach can utilise crop-growth-related information from multiple data sources and progressively generate crop harvest predictions within the crop growing season. The approach has a flexible design informed by agronomic knowledge applicable to crop growth in general, and may be tailored to different crops and production scenarios. A case study with a local farming company using its real-life production data demonstrates the feasibility and efficacy of our approach."
     },
     {
         id: "16",
@@ -181,7 +182,7 @@ export const allPublications: PublicationOutputDto[] = [
         publishedAt: new Date(2022, 3, 12),
         destination: PublicationDestination.Conferences,
         doi: "https://www.doi.org/10.1109/VRW55335.2022.00099",
-        Abstract: "There is a growing need to assist radiologists in performing X-ray readings and diagnoses fast, comfortably, and effectively. As radiologists strive to maximize productivity, it is essential to consider the impact of reading rooms in interpreting complex examinations and ensure that higher volume and reporting speeds do not compromise patient outcomes. Virtual Reality (VR) is a disruptive technology for clinical practice in assessing X-ray images. We argue that conjugating eye-tracking with VR devices and Machine Learning may overcome obstacles posed by inadequate ergonomic postures and poor room conditions that often cause erroneous diagnostics when professionals examine digital images",
+        Abstract: "There is a growing need to assist radiologists in performing X-ray readings and diagnoses fast, comfortably, and effectively. As radiologists strive to maximize productivity, it is essential to consider the impact of reading rooms in interpreting complex examinations and ensure that higher volume and reporting speeds do not compromise patient outcomes. Virtual Reality (VR) is a disruptive technology for clinical practice in assessing X-ray images. We argue that conjugating eye-tracking with VR devices and Machine Learning may overcome obstacles posed by inadequate ergonomic postures and poor room conditions that often cause erroneous diagnostics when professionals examine digital images.",
     }
 
 ];
