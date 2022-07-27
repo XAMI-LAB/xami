@@ -4,7 +4,7 @@ import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
 import { NavLink, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useHistory } from 'react-router';
-import { faBars, faFlag, faHome, faLightbulb, faScroll, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faFlag, faHome, faLightbulb, faScroll, faUsers, faClapperboard } from '@fortawesome/free-solid-svg-icons';
 import { Header } from 'antd/lib/layout/layout';
 import { CodeIcon, HeartFillIcon } from '@primer/octicons-react'
 import '../styles/Base.scss'
@@ -61,6 +61,9 @@ export default function DefaultLayout(props: any) {
                     <Menu.Item key='5' icon={<FontAwesomeIcon icon={faScroll} />}>
                         <Link className="link" to='/publications' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Publications</Link>
                     </Menu.Item>
+                    <Menu.Item key='6' icon={<FontAwesomeIcon icon={faClapperboard} />}>
+                        <Link className="link" to='/videos' style={{ fontFamily: "Raleway", fontWeight: "bold" }}>XAMI-Tube</Link>
+                    </Menu.Item>
                 </Menu>
             </Sider>
                 : <Drawer placement="left" onClose={() => setDrawerVisible(false)} visible={drawerVisible} width="256px" bodyStyle={{ padding: 0, backgroundColor: "#001628", minHeight: "100vh" }} style={{ zIndex: 10000, }}>
@@ -101,6 +104,12 @@ export default function DefaultLayout(props: any) {
                             setDrawerVisible(false);
                         }}>
                             <div style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Publications</div>
+                        </Menu.Item>
+                        <Menu.Item key='6' icon={<FontAwesomeIcon icon={faClapperboard}/>} onClick={() => {
+                            history.push("/videos");
+                            setDrawerVisible(false);
+                        }}>
+                            <div style={{ fontFamily: "Raleway", fontWeight: "bold" }}>XAMI-Tube</div>
                         </Menu.Item>
                         {/* <Menu.Item key='7' icon={<FontAwesomeIcon icon={faBrain} />}>
                     <Link to='/playground'>Algorithms in Action</Link>

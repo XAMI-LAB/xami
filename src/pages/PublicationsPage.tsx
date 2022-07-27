@@ -7,7 +7,7 @@ import { faFilter, faSquare, faTimes } from '@fortawesome/free-solid-svg-icons';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
-import { RepoIcon, FileIcon, VideoIcon, RocketIcon, NoteIcon, QuoteIcon   } from '@primer/octicons-react'
+import { RepoIcon, FileIcon, VideoIcon, RocketIcon, NoteIcon, QuoteIcon, FileSymlinkFileIcon   } from '@primer/octicons-react'
 import '../styles/Base.scss';
 
 
@@ -21,6 +21,9 @@ const getColorCodeElement = (destination: PublicationDestination) => {
         }
         case PublicationDestination.Arxiv: {
             return <FontAwesomeIcon style={{ marginTop: "6px" }} size="sm" icon={faSquare} color="#e3812b" />
+        }
+        case PublicationDestination.Datasets: {
+            return <FontAwesomeIcon style={{ marginTop: "6px" }} size="sm" icon={faSquare} color="#3db489" />
         }
         default: {
             return <div></div>
@@ -50,6 +53,28 @@ function Abstract(props: any) {
       );
 }
 
+function Bibtex(props: any) {
+
+    const [isAbsVisible, setIsAbsVisible] = useState(false);
+
+    const showAbs = () => {
+        setIsAbsVisible(true);
+    };
+  
+    const handleOk = () => {
+        setIsAbsVisible(false);
+    };
+
+    return (
+        <>
+        <Button className="publication-button" onClick={showAbs}><FileSymlinkFileIcon size={16} />&nbsp;&nbsp;Cite Me</Button>
+        <Modal title="Cite Me" visible={isAbsVisible} onCancel={handleOk} footer={null} width={props.width}>
+            <ReactMarkdown skipHtml={false}>{props.Bibtex}</ReactMarkdown> 
+        </Modal>
+        </>
+      );
+}
+
 export default function PublicationsPage() {
 
 
@@ -62,6 +87,7 @@ export default function PublicationsPage() {
     const actionsList = (p: PublicationOutputDto) => {
         var nodeList = [];
         p.Abstract && nodeList.push( <Abstract Abstract={p.Abstract} width={screens.md ? "40%": "100%"}/>);
+        p.bibtex && nodeList.push( <Bibtex Bibtex={p.bibtex} width={screens.md ? "40%": "100%"}/>);
         p.doi && nodeList.push( <Button className="publication-button" href={p.doi} target="_blank" rel="noreferrer"><FileIcon size={16} />&nbsp;&nbsp;Paper</Button>);
         p.arXiv && nodeList.push(<Button className="publication-button" href={p.arXiv} target="_blank" rel="noreferrer"><FileIcon size={16} />&nbsp;&nbsp;Paper</Button>);
         p.code && nodeList.push(<Button  className="publication-button" href={p.code} target="_blank" rel="noreferrer"><RepoIcon size={16} /> &nbsp;&nbsp;Code</Button>);
@@ -130,6 +156,7 @@ export default function PublicationsPage() {
                     <Button icon={<FontAwesomeIcon style={{ marginTop: "6px", marginRight: "12px" }} size="sm" icon={faSquare} color="#e3812b" />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: PublicationDestination.Arxiv })))} >Arxiv</Button>
                     <Button icon={<FontAwesomeIcon style={{ marginTop: "6px", marginRight: "12px" }} size="sm" icon={faSquare} color="#a31f37" />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: PublicationDestination.Journals })))} >Journal</Button>
                     <Button icon={<FontAwesomeIcon style={{ marginTop: "6px", marginRight: "12px" }} size="sm" icon={faSquare} color="#32628c" />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: PublicationDestination.Conferences })))} >Conference</Button>
+                    <Button icon={<FontAwesomeIcon style={{ marginTop: "6px", marginRight: "12px" }} size="sm" icon={faSquare} color="#3db489" />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: PublicationDestination.Datasets })))} >Datasets</Button>
                     {
                         screens.md ?? <Button icon={<FontAwesomeIcon style={{ marginTop: "6px" }} size="sm" icon={faTimes} />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: undefined })))} ></Button>
                     }

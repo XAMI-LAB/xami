@@ -1,8 +1,8 @@
 import { Card, Col, Divider, Row, BackTop } from 'antd'
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
 import React from 'react';
-import LiteYouTubeEmbed from 'react-lite-youtube-embed';
-import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
+// import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+// import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 import '../styles/Base.scss';
@@ -31,7 +31,8 @@ export default function HomePage() {
                 Please <a className="link" href="mailto:xami.initiaive@gmail.com" target="_blank" rel="noreferrer"> contact us </a>if you are interested in collaboration.  
                 </div>
                 <Divider />
-                <div className="subsection">Introduction to Explainable Analytics for "Black-Box" Machine Intelligence</div>
+
+                {/* <div className="subsection">Introduction to Explainable Analytics for "Black-Box" Machine Intelligence</div>
                 
                 <div className="home-video">
                     <LiteYouTubeEmbed 
@@ -42,13 +43,14 @@ export default function HomePage() {
                     />
                 </div>
                 <div className="subsubsection" style={{fontSize:"18px", fontStyle:"italic", textAlign:"center", paddingTop:"5px"}}>Australian Research Council Centre of Excellence in Mathematical and Statistical Frontiers (ACEMS) seminar series, May 2021 </div>
-                <Divider />
+                <Divider /> */}
+
                 <div className="section">Research Themes</div>
                 <Row gutter={[32, 32]} justify="center" typeof="flex">
                     <Col xs={24} sm={24} md={24} lg={12} xl={12}  xxl={6}>
                         <Card className="card" hoverable
                             onClick={() => {
-                                history.push('/research-projects')
+                                history.push('/Explainable-Predictive-Process-Analytics')
                                 // TODO: Push to research theme page.
                             }}
                             cover={<img 
@@ -56,14 +58,14 @@ export default function HomePage() {
                                 src={`${process.env.PUBLIC_URL}/assets/project/predictive-process-analytics-img.png`} />}
                         >
                             <Card.Meta title={<div className="card-title" >{<Link className="link" 
-                                to={"/research-projects"}>Explainable Predictive Process Analytics</Link>}</div>} />
+                                to={"/Explainable-Predictive-Process-Analytics"}>Explainable Predictive Process Analytics</Link>}</div>} />
                         </Card>
                     </Col>
                     <Col xs={24} sm={24} md={24} lg={12} xl={12} xxl={6}>
                         <Card className="card" 
                             hoverable
                             onClick={() => {
-                                history.push('/research-projects')
+                                history.push('/Causal-Models')
                                 // TODO: Push to research theme page. 
                             }}
                             cover={<img 
@@ -71,26 +73,26 @@ export default function HomePage() {
                                     src={`${process.env.PUBLIC_URL}/assets/project/responsible-ai-img.png`} />}
                         >
                             <Card.Meta 
-                                title={<div className="card-title">{<Link className="link" to="/research-projects">Probabilistic & Causal Models for Responsible AI</Link>}</div>} />
+                                title={<div className="card-title">{<Link className="link" to="/Causal-Models">Probabilistic & Causal Models for Responsible AI</Link>}</div>} />
                         </Card>
                     </Col>
                     <Col xs={24} sm={24} md={24} lg={12} xl={12} xxl={6}>
                         <Card className="card" hoverable
                             onClick={() => {
-                                history.push('/research-projects')
+                                history.push('/Persuasive-Models')
                                 // TODO: Push to research theme page. 
                             }}
                             cover={<img 
                                 alt="exlainble_predictive_process_analytics" 
                                 src={`${process.env.PUBLIC_URL}/assets/project/persuasive-models-img.png`} />}
                         >
-                            <Card.Meta title={<div className="card-title">{<Link className="link" to="/research-projects">Persuasive Models for Explainable AI</Link>}</div>} />
+                            <Card.Meta title={<div className="card-title">{<Link className="link" to="/Persuasive-Models">Persuasive Models for Explainable AI</Link>}</div>} />
                         </Card>
                     </Col>
                     <Col xs={24} sm={24} md={24} lg={12} xl={12} xxl={6}>
                         <Card className="card" hoverable
                             onClick={() => {
-                                history.push('/research-projects')
+                                history.push('/Explainable-Medical')
                                 // TODO: Push to research theme page. 
                                 // testing
                             }}
@@ -98,7 +100,7 @@ export default function HomePage() {
                                 alt="exlainble_predictive_process_analytics" 
                                 src={`${process.env.PUBLIC_URL}/assets/project/medical-ai-img.png`} />}
                         >
-                            <Card.Meta title={<div className="card-title">{<Link className="link" to="/research-projects">Explainable Medical Diagnostic Systems</Link>}</div>} />
+                            <Card.Meta title={<div className="card-title">{<Link className="link" to="/Explainable-Medical">Explainable Medical Diagnostic Systems</Link>}</div>} />
                         </Card>
                     </Col>
                 </Row>
