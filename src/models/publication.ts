@@ -2,6 +2,7 @@ export enum PublicationDestination {
     Conferences = 'Conferences',
     Journals = 'Journals',
     Arxiv = 'Arxiv',
+    Datasets = 'Datasets'
 }
 
 export interface PublicationOutputDto {
@@ -31,7 +32,7 @@ export const allPublications: PublicationOutputDto[] = [
         doi: "https://doi.org/10.1007/978-3-030-79108-7_8",
         code: "https://github.com/Mythreyi-V/PPA_Evaluation",
         Abstract: "Predictive process analytics focuses on predicting the future states of running instances of a business process. While advanced machine learning techniques have been used to increase the accuracy of predictions, the resulting predictive models lack transparency. Explainable machine learning methods can be used to interpret black-box models. However, it is unclear how fit for purpose these methods are in explaining process predictive models. In this paper, we aim to investigate the capabilities of two explainable methods, LIME and SHAP, in reproducing the decision-making processes of black-box process predictive models. We focus on fidelity metrics and propose a method to evaluate the faithfulness of LIME and SHAP when explaining process predictive models built on a Gradient Boosting Machine classifier. We conduct the evaluation using three real-life event logs and analyze the fidelity evaluation results to derive insights. The research contributes to evaluating the trustworthiness of explainable methods for predictive process analytics as a fundamental and key step towards human user-oriented evaluation.",
-        bibtex: "",
+        bibtex: "@inproceedings{velmurugan2021evaluating, title={Evaluating fidelity of explainable methods for predictive process analytics}, author={Velmurugan, Mythreyi and Ouyang, Chun and Moreira, Catarina and Sindhgatta, Renuka}, booktitle={International Conference on Advanced Information Systems Engineering}, pages={64--72}, year={2021}, organization={Springer} }",
     },
     {
         id: "2",
@@ -39,7 +40,8 @@ export const allPublications: PublicationOutputDto[] = [
         publishedAt: new Date(2020, 12, 9),
         destination: PublicationDestination.Conferences,
         doi: "https://doi.org/10.1007/978-3-030-65310-1_31",
-        Abstract: "In the context of business process management, predictive analytics has been applied to making predictions about the future state of an ongoing business process instance, for example, when will the process instance complete and what will be the outcome upon completion. Machine learning models can be trained on event logs of historical process execution to build the underlying predictive models. Multiple techniques have been proposed so far which encode the information available in an event log and construct input features required to train a predictive model. While accuracy has been a dominant criterion in the choice of various techniques, these techniques are often applied as a black-box in building predictive models. In this paper, we derive explanations using interpretable machine learning techniques to compare the suitability of multiple predictive models of high accuracy. The explanations allow us to gain an understanding of the underlying reasons for a prediction and highlight scenarios where accuracy alone may not be sufficient in assessing the suitability of techniques used to encode event log data to features used by a predictive model. Findings from this study further motivate the need to incorporate interpretability in predictive process analytics."
+        Abstract: "In the context of business process management, predictive analytics has been applied to making predictions about the future state of an ongoing business process instance, for example, when will the process instance complete and what will be the outcome upon completion. Machine learning models can be trained on event logs of historical process execution to build the underlying predictive models. Multiple techniques have been proposed so far which encode the information available in an event log and construct input features required to train a predictive model. While accuracy has been a dominant criterion in the choice of various techniques, these techniques are often applied as a black-box in building predictive models. In this paper, we derive explanations using interpretable machine learning techniques to compare the suitability of multiple predictive models of high accuracy. The explanations allow us to gain an understanding of the underlying reasons for a prediction and highlight scenarios where accuracy alone may not be sufficient in assessing the suitability of techniques used to encode event log data to features used by a predictive model. Findings from this study further motivate the need to incorporate interpretability in predictive process analytics.",
+        bibtex: "@inproceedings{sindhgatta2020exploring, title={Exploring interpretability for predictive process analytics}, author={Sindhgatta, Renuka and Ouyang, Chun and Moreira, Catarina}, booktitle={International Conference on Service-Oriented Computing}, pages={439--447}, year={2020}, organization={Springer} }"
     },
     {
         id: "3",
@@ -48,7 +50,8 @@ export const allPublications: PublicationOutputDto[] = [
         destination: PublicationDestination.Conferences,
         doi: "https://doi.org/10.1007/978-3-030-58666-9_15",
         code: "https://github.com/renuka98/interpretable_predictive_processmodel",
-        Abstract:"There has been a growing interest in the literature on the application of deep learning models for predicting business process behaviour, such as the next event in a case, the time for completion of an event, and the remaining execution trace of a case. Although these models provide high levels of accuracy, their sophisticated internal representations provide little or no understanding about the reason for a particular prediction, resulting in them being used as black-boxes. Consequently, an interpretable model is necessary to enable transparency and empower users to evaluate when and how much they can rely on the models. This paper explores an interpretable and accurate attention-based Long Short Term Memory (LSTM) model for predicting business process behaviour. The interpretable model provides insights into the model inputs influencing a prediction, thus facilitating transparency. An experimental evaluation shows that the proposed model capable of supporting interpretability also provides accurate predictions when compared to existing LSTM models for predicting process behaviour. The evaluation further shows that attention mechanisms in LSTM provide a sound approach to generate meaningful interpretations across different tasks in predictive process analytics."
+        Abstract:"There has been a growing interest in the literature on the application of deep learning models for predicting business process behaviour, such as the next event in a case, the time for completion of an event, and the remaining execution trace of a case. Although these models provide high levels of accuracy, their sophisticated internal representations provide little or no understanding about the reason for a particular prediction, resulting in them being used as black-boxes. Consequently, an interpretable model is necessary to enable transparency and empower users to evaluate when and how much they can rely on the models. This paper explores an interpretable and accurate attention-based Long Short Term Memory (LSTM) model for predicting business process behaviour. The interpretable model provides insights into the model inputs influencing a prediction, thus facilitating transparency. An experimental evaluation shows that the proposed model capable of supporting interpretability also provides accurate predictions when compared to existing LSTM models for predicting process behaviour. The evaluation further shows that attention mechanisms in LSTM provide a sound approach to generate meaningful interpretations across different tasks in predictive process analytics.",
+        bibtex: "@inproceedings{sindhgatta2020exploring, title={Exploring interpretable predictive models for business processes}, author={Sindhgatta, Renuka and Moreira, Catarina and Ouyang, Chun and Barros, Alistair}, booktitle={International conference on business process management}, pages={257--272}, year={2020}, organization={Springer} }"
     },
     // Journal
     // {
@@ -178,11 +181,20 @@ export const allPublications: PublicationOutputDto[] = [
     },
     {
         id: "18",
-        title: "Catarina Moreira, Isabel Blanco Nobre, Sandra Costa Sousa, Joao Madeiras Pereira, Joaquim Jorge, <span style='color:#1890FF'>**</span>, In Proceedings of 2022 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW), 450-453, 2022",
+        title: "Catarina Moreira, Isabel Blanco Nobre, Sandra Costa Sousa, Joao Madeiras Pereira, Joaquim Jorge, <span style='color:#1890FF'>*Improving X-ray Diagnostics through Eye-Tracking and XR*</span>, In Proceedings of 2022 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW), 450-453, 2022",
         publishedAt: new Date(2022, 3, 12),
         destination: PublicationDestination.Conferences,
         doi: "https://www.doi.org/10.1109/VRW55335.2022.00099",
         Abstract: "There is a growing need to assist radiologists in performing X-ray readings and diagnoses fast, comfortably, and effectively. As radiologists strive to maximize productivity, it is essential to consider the impact of reading rooms in interpreting complex examinations and ensure that higher volume and reporting speeds do not compromise patient outcomes. Virtual Reality (VR) is a disruptive technology for clinical practice in assessing X-ray images. We argue that conjugating eye-tracking with VR devices and Machine Learning may overcome obstacles posed by inadequate ergonomic postures and poor room conditions that often cause erroneous diagnostics when professionals examine digital images.",
+    },
+    {
+        id: "19",
+        title: "Jia Wei, Zhipeng He, Chun Ouyang, Catarina Moreira, <span style='color:#1890FF'>*MIMICEL: MIMIC-IV Event Log for Emergency Department*</span>, PhysioNet, 2022",
+        publishedAt: new Date(2022, 7, 18),
+        destination: PublicationDestination.Datasets,
+        doi:"https://doi.org/10.13026/64aq-jw11",
+        code: "https://github.com/ZhipengHe/MIMIC-IV-event-log-extraction-for-ED",
+        Abstract: "In this work, we extract an event log from the MIMIC-IV-ED dataset by adopting a well-established event log generation methodology, and we name this event log MIMICEL. The data tables in the MIMIC-IV-ED dataset relate to each other based on the existing relational database schema, and each table records the individual activities of patients along their journey in the emergency department (ED). While the data tables in the MIMIC-IV-ED dataset catch snapshots of a patient journey in the ED, the extracted event log MIMICEL aims to capture an end-to-end patient journey process. This will enable us to analyse the existing patient flows, thereby improving the efficiency of an ED process.",
     }
 
 ];

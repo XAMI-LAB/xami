@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import { Redirect } from 'react-router';
 import DefaultLayout from './layouts/DefaultLayout';
@@ -9,6 +9,11 @@ import MembersPage from './pages/MembersPage';
 import PublicationsPage from './pages/PublicationsPage';
 import OurMissionPage from './pages/OurMissionPage';
 import ResearchProjectsPage from './pages/ResearchProjectsPage';
+import VideoPage from './pages/VideoPage'
+import XPPAProjectsPage from './pages/ResearchProjects/XPPAProjectsPage'
+import CausalModelsProjectsPage from './pages/ResearchProjects/CausalModelsProjectsPage'
+import PersuasiveModelsProjectsPage from './pages/ResearchProjects/PersuasiveModelsProjectsPage'
+import ExplainableMedicalProjectsPage from './pages/ResearchProjects/ExplainableMedicalProjectsPage'
 
 function App() {
   return (
@@ -30,27 +35,24 @@ function App() {
           <Route path="/research-projects">
             <ResearchProjectsPage />
           </Route>
-          {/* <Route path="/members">
-            <MembersRoutePage />
+          <Route path="/videos">
+            <VideoPage />
           </Route>
-          <Route path="/mission">
-            <OurMissionPage />
+          {/* Project pages */}
+          <Route path="/Explainable-Predictive-Process-Analytics">
+            <XPPAProjectsPage />
           </Route>
-          <Route path="/publications">
-            <PublicationRoutePage />
+          <Route path="/Causal-Models">
+            <CausalModelsProjectsPage />
           </Route>
-          <Route path="/research-plan">
-            <ResearchPlanPage />
+          <Route path="/Persuasive-Models">
+            <PersuasiveModelsProjectsPage />
           </Route>
-          <Route path="/open-source-tools">
-            <OpenSourceToolsPage />
-          </Route> */}
-          {/* <Route path="/playground">
-            <PlaygroundRoute />
+          <Route path="/Explainable-Medical">
+            <ExplainableMedicalProjectsPage />
           </Route>
-          <Route path="/markdown/update/:destination">
-            <MarkdownEditingPage />
-          </Route> */}
+
+
           <Redirect to="/" />
         </Switch>
       </DefaultLayout>
