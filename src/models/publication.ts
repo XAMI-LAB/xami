@@ -1,5 +1,3 @@
-import { url } from "inspector";
-
 export enum PublicationDestination {
     Conferences = 'Conferences',
     Journals = 'Journals',
