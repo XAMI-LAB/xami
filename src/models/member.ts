@@ -30,7 +30,7 @@ export const allMembers: MemberOutputDto[] = [
     {
         id: "l-1",
         selected: true,
-        name: "Dr. Chun Ouyang",
+        name: "A/Prof. Chun Ouyang",
         occupation: OccupationSection.Leader,
         profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1620301124/rhju6s6uoldcnxmw7c0o.jpg",
         occupationSub: "",
