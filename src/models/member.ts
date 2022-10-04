@@ -281,6 +281,19 @@ export const allMembers: MemberOutputDto[] = [
         school: "School of Information Systems",
         university: "QUT",
     },
+    {
+        id: "19",
+        selected: true,
+        name: "Zeping Wang\n (Chester)",
+        occupation: OccupationSection.HDRStudents,
+        profileImage: "https://res.cloudinary.com/zhipenghe/image/upload/v1664861923/chester_el3c5g.jpg",
+        occupationSub: "MPhil Studnet",
+        orderNumber: 10,
+        email: "zeping.wang@hdr.qut.edu.au",
+        linkedIn: "https://www.linkedin.com/in/zeping-wang/",
+        school: "School of Information Systems",
+        university: "QUT", 
+    },
 
     // ExternalResearchers
     {
