@@ -28,7 +28,8 @@ export default function PersuasiveModelsProjectsPage() {
                 </p>
                 <Image 
                     width="100%"
-                    src="https://res.cloudinary.com/zhipenghe/image/upload/v1635200109/Persuaive_oxtfgq.png"
+                    // src="https://res.cloudinary.com/zhipenghe/image/upload/v1635200109/Persuaive_oxtfgq.png"
+                    src="https://raw.githubusercontent.com/ZhipengHe/ImgRepo/master/img/Persuasive.png"
                 />
                 <br/>
                 <p>

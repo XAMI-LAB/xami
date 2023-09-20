@@ -32,7 +32,8 @@ export default function CausalModelsProjectsPage() {
                 </p>
                 <Image 
                     width="100%"
-                    src="https://res.cloudinary.com/zhipenghe/image/upload/v1635199750/XAI_fo0tpg.png"
+                    // src="https://res.cloudinary.com/zhipenghe/image/upload/v1635199750/XAI_fo0tpg.png"
+                    src='https://raw.githubusercontent.com/ZhipengHe/ImgRepo/master/img/Counterfactual.png'
                 />
                 <br/>
                 <p>
