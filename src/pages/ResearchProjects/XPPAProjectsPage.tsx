@@ -38,7 +38,8 @@ export default function XPPAProjectsPage() {
             <Image 
                 width="100%" 
                 // src="https://res.cloudinary.com/zhipenghe/image/upload/v1635200030/XPPA_l740f7.png"
-                src="https://raw.githubusercontent.com/ZhipengHe/ImgRepo/master/img/XPPA.png"
+                // src="https://raw.githubusercontent.com/ZhipengHe/ImgRepo/master/img/XPPA.png"
+                src={`${process.env.PUBLIC_URL}/assets/project/XPPA.png`}
                 />
             <br/>
             <p>
