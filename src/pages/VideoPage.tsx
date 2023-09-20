@@ -17,12 +17,19 @@ export default function VideoPahe() {
     const onChange = (key: string | string[]) => {
         console.log(key);}
 
-    const avatarChun = "https://res.cloudinary.com/dcd56w8gc/image/upload/v1620301124/rhju6s6uoldcnxmw7c0o.jpg"
-    const avatarBemali = "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535852/efc2p3t0h1soojoksmdi.png"
-    const avatarCat = "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535125/vtyukjmxpoy2afzfpzfj.png"
-    const avatarJorge = "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535448/jvdkcyvgrqu5foyvxpd2.jpg"
-    const avatarRoy = "https://res.cloudinary.com/zhipenghe/image/upload/v1633505346/avatar_dr4ypx.jpg"
-    const avatarMythreyi = "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535615/v2pxj7ommlm6a4uccuhp.jpg"
+    // const avatarChun = "https://res.cloudinary.com/dcd56w8gc/image/upload/v1620301124/rhju6s6uoldcnxmw7c0o.jpg"
+    // const avatarBemali = "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535852/efc2p3t0h1soojoksmdi.png"
+    // const avatarCat = "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535125/vtyukjmxpoy2afzfpzfj.png"
+    // const avatarJorge = "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535448/jvdkcyvgrqu5foyvxpd2.jpg"
+    // const avatarRoy = "https://res.cloudinary.com/zhipenghe/image/upload/v1633505346/avatar_dr4ypx.jpg"
+    // const avatarMythreyi = "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535615/v2pxj7ommlm6a4uccuhp.jpg"
+
+    const avatarChun = "https://raw.githubusercontent.com/ZhipengHe/ImgRepo/master/img/ChunOuyang.jpg"
+    const avatarBemali = "https://raw.githubusercontent.com/ZhipengHe/ImgRepo/master/img/Bemali.png"
+    const avatarCat = "https://raw.githubusercontent.com/ZhipengHe/ImgRepo/master/img/Catarina.png"
+    const avatarJorge = "https://raw.githubusercontent.com/ZhipengHe/ImgRepo/master/img/Joaquim.jpg"
+    const avatarRoy = "https://raw.githubusercontent.com/ZhipengHe/ImgRepo/master/img/Roy.jpg"
+    const avatarMythreyi = "https://raw.githubusercontent.com/ZhipengHe/ImgRepo/master/img/Mythreyi.jpg"
 
     return (
         <div className={`home-content`} style={{ marginLeft: screens.md ? "15%": "0%", maxWidth: screens.md ? "70%": "100%"}}>

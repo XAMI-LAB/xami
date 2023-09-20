@@ -35,7 +35,11 @@ export default function XPPAProjectsPage() {
                 model, let alone its predictions. This has led to establishment of the research theme on <i>explainable predictive process analytics</i>. 
             </p>
 
-            <Image width="100%" src="https://res.cloudinary.com/zhipenghe/image/upload/v1635200030/XPPA_l740f7.png" />
+            <Image 
+                width="100%" 
+                // src="https://res.cloudinary.com/zhipenghe/image/upload/v1635200030/XPPA_l740f7.png"
+                src="https://raw.githubusercontent.com/ZhipengHe/ImgRepo/master/img/XPPA.png"
+                />
             <br/>
             <p>
                 The projects under this research theme aim to address the notions of explainablility and interpretability throughout the pipeline of 

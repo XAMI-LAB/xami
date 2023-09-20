@@ -23,7 +23,8 @@ export default function ExplainableMedicalProjectsPage() {
                 </p>
                 <Image 
                     width="100%"
-                    src="https://res.cloudinary.com/zhipenghe/image/upload/v1635200117/Medical_yilp18.png"
+                    // src="https://res.cloudinary.com/zhipenghe/image/upload/v1635200117/Medical_yilp18.png"
+                    src="https://raw.githubusercontent.com/ZhipengHe/ImgRepo/master/img/MedicalXAI.png"
                 />
                 <br/>
                 <p>
