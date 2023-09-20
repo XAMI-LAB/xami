@@ -24,12 +24,12 @@ export default function VideoPahe() {
     // const avatarRoy = "https://res.cloudinary.com/zhipenghe/image/upload/v1633505346/avatar_dr4ypx.jpg"
     // const avatarMythreyi = "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535615/v2pxj7ommlm6a4uccuhp.jpg"
 
-    const avatarChun = "https://raw.githubusercontent.com/ZhipengHe/ImgRepo/master/img/ChunOuyang.jpg"
-    const avatarBemali = "https://raw.githubusercontent.com/ZhipengHe/ImgRepo/master/img/Bemali.png"
-    const avatarCat = "https://raw.githubusercontent.com/ZhipengHe/ImgRepo/master/img/Catarina.png"
-    const avatarJorge = "https://raw.githubusercontent.com/ZhipengHe/ImgRepo/master/img/Joaquim.jpg"
-    const avatarRoy = "https://raw.githubusercontent.com/ZhipengHe/ImgRepo/master/img/Roy.jpg"
-    const avatarMythreyi = "https://raw.githubusercontent.com/ZhipengHe/ImgRepo/master/img/Mythreyi.jpg"
+    const avatarChun = "https://cdn.jsdelivr.net/gh/ZhipengHe/ImgRepo@master/img/ChunOuyang.jpg"
+    const avatarBemali = "https://cdn.jsdelivr.net/gh/ZhipengHe/ImgRepo@master/img/Bemali.png"
+    const avatarCat = "https://cdn.jsdelivr.net/gh/ZhipengHe/ImgRepo@master/img/Catarina.png"
+    const avatarJorge = "https://cdn.jsdelivr.net/gh/ZhipengHe/ImgRepo@master/img/Joaquim.jpg"
+    const avatarRoy = "https://cdn.jsdelivr.net/gh/ZhipengHe/ImgRepo@master/img/Roy.jpg"
+    const avatarMythreyi = "https://cdn.jsdelivr.net/gh/ZhipengHe/ImgRepo@master/img/Mythreyi.jpg"
 
     return (
         <div className={`home-content`} style={{ marginLeft: screens.md ? "15%": "0%", maxWidth: screens.md ? "70%": "100%"}}>
