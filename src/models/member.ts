@@ -3,7 +3,8 @@ export enum OccupationSection {
     Leader = "Leader",
     Collaborators = "Collaborators",
     HDRStudents = "HDRStudents",
-    ExternalResearchers = "ExternalResearchers"
+    ExternalResearchers = "ExternalResearchers",
+    Alumni = "Alumni"
 }
 
 
@@ -47,13 +48,13 @@ export const allMembers: MemberOutputDto[] = [
     {
         id: "l-2",
         selected: true,
-        name: "Dr. Catarina Moreira",
+        name: "A/Prof. Catarina Moreira",
         occupation: OccupationSection.Leader,
         // profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535125/vtyukjmxpoy2afzfpzfj.png",
         profileImage: "https://cdn.jsdelivr.net/gh/ZhipengHe/ImgRepo@master/img/Catarina.png",
         occupationSub: "",
-        school: "School of Information Systems",
-        university: "QUT",
+        school: "Data Science Institute",
+        university: "University of Technology Sydney",
         orderNumber: 2,
         email: "catarina.pintomoreira@qut.edu.au",
         linkedIn: "https://www.linkedin.com/in/catarinapmoreira",
@@ -150,7 +151,7 @@ export const allMembers: MemberOutputDto[] = [
         occupation: OccupationSection.HDRStudents,
         // profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535615/v2pxj7ommlm6a4uccuhp.jpg",
         profileImage: "https://cdn.jsdelivr.net/gh/ZhipengHe/ImgRepo@master/img/Mythreyi.jpg",
-        occupationSub: "PhD Student",
+        occupationSub: "Sessional Academic",
         school: "School of Information Systems",
         university: "QUT",
         orderNumber: 2,
@@ -164,18 +165,18 @@ export const allMembers: MemberOutputDto[] = [
         id: "8",
         selected: true,
         name: "Yu-Liang Chou\n (Leon)",
-        occupation: OccupationSection.HDRStudents,
+        occupation: OccupationSection.Alumni,
         // profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535686/lolnxfe64mt8vydthdlk.jpg",
         profileImage: "https://cdn.jsdelivr.net/gh/ZhipengHe/ImgRepo@master/img/Leon.jpg",
         occupationSub: "MPhil Student",
         orderNumber: 3,
-        email: "yuliang.chou@hdr.qut.edu.au",
+        email: "", // "yuliang.chou@hdr.qut.edu.au"
         linkedIn: "https://www.linkedin.com/in/leon-chou-3b56ba175",
         scholar: "",
         homepage: "",
         github: "",
-        school: "School of Information Systems",
-        university: "QUT",
+        school: "", // "School of Information Systems",
+        university: "", // "QUT",
     },
     {
         id: "9",
@@ -304,7 +305,7 @@ export const allMembers: MemberOutputDto[] = [
         occupation: OccupationSection.HDRStudents,
         // profileImage: "https://res.cloudinary.com/zhipenghe/image/upload/v1664861923/chester_el3c5g.jpg",
         profileImage: "https://cdn.jsdelivr.net/gh/ZhipengHe/ImgRepo@master/img/Chester.jpg",
-        occupationSub: "MPhil Studnet",
+        occupationSub: "PhD Studnet",
         orderNumber: 10,
         email: "zeping.wang@hdr.qut.edu.au",
         linkedIn: "https://www.linkedin.com/in/zeping-wang/",

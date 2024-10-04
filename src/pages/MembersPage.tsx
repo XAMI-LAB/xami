@@ -31,6 +31,7 @@ export default function MembersPage() {
                     getMemberShowingSectionWithOccupation("Collaborators", OccupationSection.Collaborators),
                     getMemberShowingSectionWithOccupation("Researchers", OccupationSection.HDRStudents),
                     getMemberShowingSectionWithOccupation("External Researchers", OccupationSection.ExternalResearchers),
+                    getMemberShowingSectionWithOccupation("Alumni", OccupationSection.Alumni),
                 ]
             }
         </div>

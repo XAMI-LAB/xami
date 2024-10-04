@@ -47,16 +47,16 @@ export default function MembersSection(props: MembersSectionProps) {
                             //  xs={12} sm={8} md={8} lg={6} xl={4} xxl={6}
                             >
                                 <div key={m.id}>
-                                    <Card style={{ height: "100%",  width: "200px", boxShadow: "2px 2px #8888881f" }}
+                                    <Card style={{ height: "100%",  width: "215px", boxShadow: "2px 2px #8888881f" }}
                                         cover={<img style={{ objectFit: "cover", height: "250px"}} 
                                                     alt="persornal_image" src={m.profileImage} />}
                                         actions={actionsList(m)}
                                     >
-                                        <Card.Meta title={<div style={{ fontSize: "14px", fontFamily: "Raleway",whiteSpace: "pre-line", fontWeight: "bolder", textAlign: "center"}}>{m.name}</div>} 
+                                        <Card.Meta title={<div style={{ fontSize: "14px", fontFamily: "Raleway", whiteSpace: "nowrap", fontWeight: "bolder", textAlign: "center"}}>{m.name}</div>} 
                                                 description={<div style={{ color: "#505050"}}>
                                                     <div style={{ fontSize: "11px", textAlign: "center", fontFamily: "sans-serif", fontWeight: "bold"}}>{m.occupationSub}</div>
                                                     <div style={{ fontSize: "11px", textAlign: "center", fontFamily: "sans-serif" }}>{m.school}</div>
-                                                    <div style={{ fontSize: "11px", textAlign: "center", fontFamily: "sans-serif" }}>{m.university}</div>
+                                                    <div style={{ fontSize: "11px", textAlign: "center", fontFamily: "sans-serif" , whiteSpace: "nowrap",}}>{m.university}</div>
                                                 </div>} />
                                     </Card>
                                 </div>
