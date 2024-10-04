@@ -136,7 +136,7 @@ export default function DefaultLayout(props: any) {
                     {props.children}        
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>
-                    Copyright © 2021 - 2023 {<CodeIcon size={18} />} with {<HeartFillIcon size={18} />} by XAMI Lab <a href="http://www.qut.edu.au" target="_blank" rel="noreferrer">@QUT</a>.
+                    Copyright © 2021 - 2024 {<CodeIcon size={18} />} with {<HeartFillIcon size={18} />} by XAMI Lab <a href="http://www.qut.edu.au" target="_blank" rel="noreferrer">@QUT</a>.
                 </Footer>
             </Layout>
         </Layout>
