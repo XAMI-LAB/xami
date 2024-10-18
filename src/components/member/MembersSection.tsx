@@ -35,7 +35,7 @@ export default function MembersSection(props: MembersSectionProps) {
         <div>
             <div>
                 <Divider>
-                    <div style={{ fontFamily: "Montserrat", fontWeight: "bold", fontSize: "2.5em", }}>{title}</div>
+                    <div style={{ fontFamily: "Montserrat", fontWeight: "bold", fontSize: "2.5em", whiteSpace: "pre-line"}}>{title}</div>
                 </Divider>
             </div>
 
@@ -47,7 +47,7 @@ export default function MembersSection(props: MembersSectionProps) {
                             //  xs={12} sm={8} md={8} lg={6} xl={4} xxl={6}
                             >
                                 <div key={m.id}>
-                                    <Card style={{ height: "100%",  width: "215px", boxShadow: "2px 2px #8888881f" }}
+                                    <Card style={{ height: "100%",  width: "230px", boxShadow: "2px 2px #8888881f" }}
                                         cover={<img style={{ objectFit: "cover", height: "250px"}} 
                                                     alt="persornal_image" src={m.profileImage} />}
                                         actions={actionsList(m)}
