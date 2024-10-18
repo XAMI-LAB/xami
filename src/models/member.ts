@@ -147,7 +147,8 @@ export const allMembers: MemberOutputDto[] = [
     {
         id: "7",
         selected: true,
-        name: "Mythreyi\n Velmurugan",
+        // \u00A0 is a non-breaking space
+        name: "Dr. Mythreyi\n Velmurugan",
         occupation: OccupationSection.HDRStudents,
         // profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535615/v2pxj7ommlm6a4uccuhp.jpg",
         profileImage: "https://cdn.jsdelivr.net/gh/ZhipengHe/ImgRepo@master/img/Mythreyi.jpg",
@@ -164,11 +165,11 @@ export const allMembers: MemberOutputDto[] = [
     {
         id: "8",
         selected: true,
-        name: "Yu-Liang Chou\n (Leon)",
+        name: "Yu-Liang Chou (Leon)",
         occupation: OccupationSection.Alumni,
         // profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535686/lolnxfe64mt8vydthdlk.jpg",
         profileImage: "https://cdn.jsdelivr.net/gh/ZhipengHe/ImgRepo@master/img/Leon.jpg",
-        occupationSub: "MPhil Student",
+        occupationSub: "MPhil Graduate",
         orderNumber: 3,
         email: "", // "yuliang.chou@hdr.qut.edu.au"
         linkedIn: "https://www.linkedin.com/in/leon-chou-3b56ba175",
@@ -181,7 +182,7 @@ export const allMembers: MemberOutputDto[] = [
     {
         id: "9",
         selected: false,
-        name: "Peng Yu\n (Kenny)",
+        name: "Peng Yu (Kenny)",
         occupation: OccupationSection.HDRStudents,
         // profileImage: "https://res.cloudinary.com/dcd56w8gc/image/upload/v1619535769/cbyv9gnmzbzlc5hmoc3s.jpg",
         profileImage: "https://cdn.jsdelivr.net/gh/ZhipengHe/ImgRepo@master/img/PengYu.jpg",
@@ -267,7 +268,7 @@ export const allMembers: MemberOutputDto[] = [
     {
         id: "14",
         selected: true,
-        name: "Jing Yang\n (Roy)",
+        name: "Dr. Jing Yang\n (Roy)",
         occupation: OccupationSection.HDRStudents,
         // profileImage: "https://res.cloudinary.com/zhipenghe/image/upload/v1633505346/avatar_dr4ypx.jpg",
         profileImage: "https://cdn.jsdelivr.net/gh/ZhipengHe/ImgRepo@master/img/Roy.jpg",
