@@ -380,5 +380,18 @@ export const allMembers: MemberOutputDto[] = [
         school: "PhD Researcher",
         university: "KU Leuven",
 
+    },
+    {
+        id: "21",
+        selected: true,
+        name: "Mohammed Osman Gani",
+        occupation: OccupationSection.HDRStudents,
+        profileImage: "https://cdn.jsdelivr.net/gh/ZhipengHe/ImgRepo@master/img/Osman.jpg",
+        orderNumber: 11,
+        occupationSub: "PhD Student",
+        email: "mohammedosman.gani@hdr.qut.edu.au",
+        linkedIn: "https://www.linkedin.com/in/mohammed-osman-gani-3b75a0185/",
+        school: "School of Information Systems",
+        university: "QUT", 
     }
 ];
