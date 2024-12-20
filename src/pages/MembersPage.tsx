@@ -29,7 +29,7 @@ export default function MembersPage() {
                 [
                     getMemberShowingSectionWithOccupation("Leaders", OccupationSection.Leader),
                     getMemberShowingSectionWithOccupation("Collaborators", OccupationSection.Collaborators),
-                    getMemberShowingSectionWithOccupation("Researchers", OccupationSection.HDRStudents),
+                    getMemberShowingSectionWithOccupation("Researchers", OccupationSection.Researchers),
                     getMemberShowingSectionWithOccupation("External Researchers", OccupationSection.ExternalResearchers),
                     getMemberShowingSectionWithOccupation("Alumni", OccupationSection.Alumni),
                 ]
