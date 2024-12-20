@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { allPublications, PublicationDestination, PublicationOutputDto } from '../models/publication';
+import { allMembers } from '../models/member';
 import { Button, Input, List, Modal, Row, Space, Select, BackTop } from 'antd';
 import PublicationQueryParams from '../queryParams/PublicationQueryParams'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -98,6 +99,19 @@ export default function PublicationsPage() {
         return nodeList;
     }
 
+    // Highlight all member names in the given text
+    const highlightMemberNames = (text: string): string => {
+        allMembers.forEach((member) => {
+            const regex = new RegExp(`(${member.publicationPageName})`, "gi");
+            text = text.replace(
+                regex,
+                `<span style="font-weight: bold; text-decoration: underline;">$1</span>`
+            );
+        });
+        return text;
+    };
+    
+
     const getFilteredPublications = () => {
         let showingPublications = publications;
 
@@ -108,6 +122,12 @@ export default function PublicationsPage() {
         if (queryParams.content && queryParams.content.trim() !== "") {
             showingPublications = showingPublications.filter(p => p.title.toLowerCase().includes(queryParams.content!.trim().toLowerCase()));
         }
+
+        // Apply member name highlighting to the "title" field
+        showingPublications = showingPublications.map((p) => ({
+            ...p,
+            title: highlightMemberNames(p.title), // Highlight all member names
+        }));
 
         return showingPublications.sort((a: PublicationOutputDto, b: PublicationOutputDto) => b.publishedAt.getTime() - a.publishedAt.getTime());
     }
