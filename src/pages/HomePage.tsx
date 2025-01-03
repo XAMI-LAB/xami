@@ -3,14 +3,13 @@ import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
 import React from 'react';
 // import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 // import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
-import { useHistory } from 'react-router';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles/Base.scss';
 
 export default function HomePage() {
     // TODO: Replace all inline styles with scss styles
 
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const screen = useBreakpoint()
 
@@ -50,7 +49,7 @@ export default function HomePage() {
                     <Col xs={24} sm={24} md={24} lg={12} xl={12}  xxl={6}>
                         <Card className="card" hoverable
                             onClick={() => {
-                                history.push('/Explainable-Predictive-Process-Analytics')
+                                navigate('/Explainable-Predictive-Process-Analytics')
                                 // TODO: Push to research theme page.
                             }}
                             cover={<img 
@@ -65,7 +64,7 @@ export default function HomePage() {
                         <Card className="card" 
                             hoverable
                             onClick={() => {
-                                history.push('/Causal-Models')
+                                navigate('/Causal-Models')
                                 // TODO: Push to research theme page. 
                             }}
                             cover={<img 
@@ -79,7 +78,7 @@ export default function HomePage() {
                     <Col xs={24} sm={24} md={24} lg={12} xl={12} xxl={6}>
                         <Card className="card" hoverable
                             onClick={() => {
-                                history.push('/Persuasive-Models')
+                                navigate('/Persuasive-Models')
                                 // TODO: Push to research theme page. 
                             }}
                             cover={<img 
@@ -92,7 +91,7 @@ export default function HomePage() {
                     <Col xs={24} sm={24} md={24} lg={12} xl={12} xxl={6}>
                         <Card className="card" hoverable
                             onClick={() => {
-                                history.push('/Explainable-Medical')
+                                navigate('/Explainable-Medical')
                                 // TODO: Push to research theme page. 
                                 // testing
                             }}

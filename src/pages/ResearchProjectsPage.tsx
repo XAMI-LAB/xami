@@ -1,15 +1,14 @@
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
 import React from 'react'
 import { BackTop, Row, Card, Col } from 'antd'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 // import { LoremIpsum } from 'react-lorem-ipsum';
-import { useHistory } from 'react-router';
 import '../styles/Base.scss';
 
 export default function ResearchProjectsPage() {
     const screens = useBreakpoint();
 
-    const history = useHistory();
+    const navigate = useNavigate();
 
     return (
         <div className={`home-content`} style={{ marginLeft: screens.md ? "15%": "0%", maxWidth: screens.md ? "70%": "100%"}}>
@@ -23,7 +22,7 @@ export default function ResearchProjectsPage() {
                     <Col xs={24} sm={24} md={24} lg={12} xl={12}  xxl={6}>
                         <Card className="card" hoverable
                             onClick={() => {
-                                history.push('/Explainable-Predictive-Process-Analytics')
+                                navigate('/Explainable-Predictive-Process-Analytics')
                                 // TODO: Push to research theme page.
                             }}
                             cover={<img 
@@ -38,7 +37,7 @@ export default function ResearchProjectsPage() {
                         <Card className="card" 
                             hoverable
                             onClick={() => {
-                                history.push('/Causal-Models')
+                                navigate('/Causal-Models')
                                 // TODO: Push to research theme page. 
                             }}
                             cover={<img 
@@ -52,7 +51,7 @@ export default function ResearchProjectsPage() {
                     <Col xs={24} sm={24} md={24} lg={12} xl={12} xxl={6}>
                         <Card className="card" hoverable
                             onClick={() => {
-                                history.push('/Persuasive-Models')
+                                navigate('/Persuasive-Models')
                                 // TODO: Push to research theme page. 
                             }}
                             cover={<img 
@@ -65,7 +64,7 @@ export default function ResearchProjectsPage() {
                     <Col xs={24} sm={24} md={24} lg={12} xl={12} xxl={6}>
                         <Card className="card" hoverable
                             onClick={() => {
-                                history.push('/Explainable-Medical')
+                                navigate('/Explainable-Medical')
                                 // TODO: Push to research theme page. 
                                 // testing
                             }}
