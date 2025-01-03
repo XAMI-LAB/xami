@@ -171,7 +171,7 @@ export default function PublicationsPage() {
                         screens.md || <Button icon={<FontAwesomeIcon style={{ marginTop: "6px" }} size="sm" icon={faTimes} />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: undefined })))} ></Button>
                     }
                 </Space>
-                <Space>
+                <Space wrap>
                     <Button type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: undefined })))} >All</Button>
                     <Button icon={<FontAwesomeIcon style={{ marginTop: "6px", marginRight: "12px" }} size="sm" icon={faSquare} color="#e3812b" />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: PublicationDestination.Arxiv })))} >Arxiv</Button>
                     <Button icon={<FontAwesomeIcon style={{ marginTop: "6px", marginRight: "12px" }} size="sm" icon={faSquare} color="#a31f37" />} type="default" onClick={() => setQueryParams((prev) => (new PublicationQueryParams({ ...prev, destination: PublicationDestination.Journals })))} >Journal</Button>
