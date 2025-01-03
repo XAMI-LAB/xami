@@ -1,6 +1,6 @@
 import { Divider, BackTop } from 'antd';
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint'
-import { LoremIpsum } from 'react-lorem-ipsum';
+// import { LoremIpsum } from 'react-lorem-ipsum';
 import React from 'react'
 import '../styles/Base.scss'
 

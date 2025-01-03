@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Drawer, Layout, Menu, Row } from "antd";
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useHistory } from 'react-router';
 import { faBars, faFlag, faHome, faLightbulb, faScroll, faUsers, faClapperboard } from '@fortawesome/free-solid-svg-icons';
 import { Header } from 'antd/lib/layout/layout';
 import { CodeIcon, HeartFillIcon } from '@primer/octicons-react'
@@ -15,7 +14,7 @@ export default function DefaultLayout(props: any) {
 
     const screen = useBreakpoint()
     const [collapsed, setCollapsed] = useState(screen.md);
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const [drawerVisible, setDrawerVisible] = useState<boolean>(false);
 
@@ -26,6 +25,8 @@ export default function DefaultLayout(props: any) {
     const onCollapse = (collapsed: boolean) => {
         setCollapsed(collapsed)
     };
+
+    const currentYear = new Date().getFullYear();
 
     return (
         <Layout style={{ fontSize: screen.md ? "18px" : "14px" }}>
@@ -76,37 +77,37 @@ export default function DefaultLayout(props: any) {
                     </div>
                     <Menu theme='dark' mode="inline" defaultSelectedKeys={["1"]} style={{ width: "256px" }}>
                         <Menu.Item key='1' icon={<FontAwesomeIcon icon={faHome} />} onClick={() => {
-                            history.push("/");
+                            navigate("/");
                             setDrawerVisible(false);
                         }}>
                             <div style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Home</div>
                         </Menu.Item>
                         <Menu.Item key='2' icon={<FontAwesomeIcon icon={faFlag} />} onClick={() => {
-                            history.push("/our-mission");
+                            navigate("/our-mission");
                             setDrawerVisible(false);
                         }}>
                             <div style={{ fontFamily: "Raleway", fontWeight: "bold" }} >Our Mission</div>
                         </Menu.Item>
                         <Menu.Item key='3' icon={<FontAwesomeIcon icon={faUsers} />} onClick={() => {
-                            history.push("/members");
+                            navigate("/members");
                             setDrawerVisible(false);
                         }}>
                             <div style={{ fontFamily: "Raleway", fontWeight: "bold" }}>People</div>
                         </Menu.Item>
                         <Menu.Item key='4' icon={<FontAwesomeIcon icon={faLightbulb} />} onClick={() => {
-                            history.push("/research-projects");
+                            navigate("/research-projects");
                             setDrawerVisible(false);
                         }}>
                             <div style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Research Projects</div>
                         </Menu.Item>
                         <Menu.Item key='5' icon={<FontAwesomeIcon icon={faScroll} />} onClick={() => {
-                            history.push("/publications");
+                            navigate("/publications");
                             setDrawerVisible(false);
                         }}>
                             <div style={{ fontFamily: "Raleway", fontWeight: "bold" }}>Publications</div>
                         </Menu.Item>
                         <Menu.Item key='6' icon={<FontAwesomeIcon icon={faClapperboard}/>} onClick={() => {
-                            history.push("/videos");
+                            navigate("/videos");
                             setDrawerVisible(false);
                         }}>
                             <div style={{ fontFamily: "Raleway", fontWeight: "bold" }}>XAMI-Tube</div>
@@ -136,7 +137,7 @@ export default function DefaultLayout(props: any) {
                     {props.children}        
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>
-                    Copyright © 2021 - 2024 {<CodeIcon size={18} />} with {<HeartFillIcon size={18} />} by XAMI Lab <a href="http://www.qut.edu.au" target="_blank" rel="noreferrer">@QUT</a>.
+                    Copyright © 2021 - {currentYear} {<CodeIcon size={18} />} with {<HeartFillIcon size={18} />} by XAMI Lab <a href="http://www.qut.edu.au" target="_blank" rel="noreferrer">@QUT</a>. 
                 </Footer>
             </Layout>
         </Layout>
